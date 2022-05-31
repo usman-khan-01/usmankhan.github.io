@@ -1,0 +1,48 @@
+---
+info:
+  firstName: Usman
+  lastName: Khan
+  fullName: Usman Khan
+  profession: Web Developer
+  email: usmangorsi@outlook.com
+  Address: Lahore, Pakistan
+  Languages: Urdu, English
+  Industry: Information Technology (IT)
+  Functionsl Area: Web Development
+  tagline: I can help you achieve your goal as a web developer.
+  about: I'm a web developer with experience in Asp.net Core / Mvc, Angular and WordPress. I’m currently working 
+    on Fiverr and Upwork as a freelancer in web development. I have a good understanding of Web Development with 
+    Asp.net MVC/Core, Angular and Wordpress. I’ve performed tasks related to theme integration in Angular, Asp.net MVC, 
+    WordPress and API Integration in Angular and Asp.net/Core.
+---
+skills:
+  - { name: Html, percentage: 80 }
+  - { name: Css / Scss, percentage: 80 }
+  - { name: Bootstrap, percentage: 80 }
+  - { name: JavaScript / jQuery, percentage: 80 }
+  - { name: Angular, percentage: 75 }
+  - { name: Asp.Net Core / MVC, percentage: 75 }
+  - { name: C#, percentage: 60 }
+  - { name: Object Oriented Programming / OOP, percentage: 60 }
+  - { name: Entity Framework, percentage: 60 }
+portfolios:
+  - name: Roofers FZC
+    image: images/Rooferz FZC Banner.jpg
+    framework: WordPress
+    link: https://roofersfzc.net/
+education:
+  - degree: High School
+    subject: Metric in Biology
+    institution: Jinnah Public School
+    summary: Completed high school education in 2016 form Jinnah public school.
+    yearOfGraduation: 2014 - 2016
+  - degree: Intermidiate Degree / College
+    subject: Bachelors in Computer Sciences
+    institution: Superior Group of Colleges
+    summary: Completed college education in 2018 form Superior Group of Colleges.
+    yearOfGraduation: 2016 - 2018
+  - degree: Bachelor's Degree
+    subject: University of Computer Science
+    institution: Virtual University of Pakistan
+    summary: Doing bachelor's degree in Computer Science form Virtual University of Pakistan.
+    yearOfGraduation: 2018 - Onwards
