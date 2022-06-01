@@ -1,7 +1,8 @@
-
+// data
 $(function () {
     $.getJSON('../data/data.json', function (data) {
         // basic info
+        $('.navbar-brand').append(data.info.fullName);
         $('.name').append(data.info.fullName);
         $('.category').append(data.info.profession);
         $('.cc-profile-image a').append(`<img src="${data.info.profileImage}" alt="Uk's Profile Image" />`);
@@ -69,5 +70,23 @@ $(function () {
                     </div>`);
             }
         });
+
+        // experience
+        
     });
 });
+
+// pdf conversion
+// $(document).on('click', '#gpdf', function (event) {
+//     event.preventDefault();
+//     console.log($('#gpdf'))
+//     var element = document.querySelector('#top');
+//     var opt = {
+//         margin: 1,
+//         filename: 'Usman Khan CV.pdf',
+//         image: { type: 'jpeg', quality: 0.98 },
+//         html2canvas: { scale: 2 },
+//         jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
+//     }
+//     html2pdf().set(opt).from(element).save();
+// });

@@ -125,6 +125,13 @@
             "name": "alberts167",
             "country": "Peru",
             "review": "Awesome to work with. Great responsiveness and understanding of what was required. He provided me the best solutions and recommendations for my project."
+        },
+        {
+            "id": 6,
+            "imageUrl": "images/placeholder-400x400.gif",
+            "name": "Ashpaddon",
+            "country": "Australia",
+            "review": "The seller was very easy to work with and prompt with all requests. He went beyond what was asked of him. Thanks again. Look forward to working with you in the future."
         }
     ]
 }
