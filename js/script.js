@@ -5,8 +5,8 @@ $(function () {
         $('.navbar-brand').append(data.info.fullName);
         $('.name').append(data.info.fullName);
         $('.category').append(data.info.profession);
-        $('.cc-profile-image a').append(`<img src="${data.info.profileImage}" alt="Uk's Profile Image" />`);
-        $('.aboutMe').append(`<p>${data.info.about}</p>`);
+        document.querySelector('.profile-image').src = data.info.imageUrl;
+        $('.aboutMe').append(data.info.about);
         var basicInformation = ["Email", "Address", "Languages", "Industry", "Functionsl Area"];
         $.each(basicInformation, function (i, value) { $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'); });
         $.each(data.basicInfo, function (i, value) { $('.pInfoValue').append(value + '<br><br>'); });
@@ -50,20 +50,27 @@ $(function () {
 
         // testimonial
         $.each(data.testimonials, function (i, testimonial) {
+            $('.carousel-indicators').append(`<li class="carousel-indicator" data-target="#cc-Indicators" dataSlideTo="0"></li>`);
             if (testimonial.id == 1) {
+                $('.carousel-indicator').addClass('active');
                 $('.carousel-inner').append(`<div class="carousel-item active">
                     <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
-                    <img src="${testimonial.imageUrl}" alt="Client Image" />
+                    <a href="${testimonial.link}" target="_blank">
+                    <img src="${testimonial.imageUrl}" alt="${testimonial.name}'s Image" />
+                    </a>
                     <div class="h5 pt-2">${testimonial.name}</div> <p class="category">${testimonial.country}</p> </div>
                     <div class="col-lg-10 col-md-9"> <p>${testimonial.review}</p> </div>
                     </div>
                     </div>`);
             } else {
+                $('.carousel-indicator').removeClass('active');
                 $('.carousel-inner').append(`<div class="carousel-item">
                     <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
-                    <img src="${testimonial.imageUrl}" alt="Client Image" />
+                    <a href="${testimonial.link}" target="_blank">
+                    <img src="${testimonial.imageUrl}" alt="${testimonial.name}'s Image" />
+                    </a>
                     <div class="h5 pt-2">${testimonial.name}</div> <p class="category">${testimonial.country}</p> </div>
                     <div class="col-lg-10 col-md-9"> <p>${testimonial.review}</p> </div>
                     </div>
@@ -72,21 +79,6 @@ $(function () {
         });
 
         // experience
-        
+
     });
 });
-
-// pdf conversion
-// $(document).on('click', '#gpdf', function (event) {
-//     event.preventDefault();
-//     console.log($('#gpdf'))
-//     var element = document.querySelector('#top');
-//     var opt = {
-//         margin: 1,
-//         filename: 'Usman Khan CV.pdf',
-//         image: { type: 'jpeg', quality: 0.98 },
-//         html2canvas: { scale: 2 },
-//         jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-//     }
-//     html2pdf().set(opt).from(element).save();
-// });

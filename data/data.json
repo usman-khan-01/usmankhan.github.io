@@ -3,7 +3,7 @@
         "firstName": "Usman",
         "lastName": "Khan",
         "fullName": "Usman Khan",
-        "profileImage": "images/ProfileImage.png",
+        "imageUrl": "images/ProfileImage.png",
         "profession": "Web Developer",
         "tagline": "I can help you achieve your goal as a web developer.",
         "about": " I'm a web developer with experience in Asp.net Core / Mvc, Angular and WordPress. I’m currently working on Fiverr and Upwork as a freelancer in web development. I have a good understanding of Web Development with Asp.net MVC/Core, Angular and Wordpress. I’ve performed tasks related to theme integration in Angular, Asp.net MVC, WordPress and API Integration in Angular and Asp.net/Core."
@@ -94,6 +94,7 @@
         {
             "id": 1,
             "imageUrl": "images/placeholder-400x400.gif",
+            "link":"https://www.fiverr.com/osamabelaama224?source=order_page_user_link",
             "name": "Osama",
             "country": "Malta",
             "review": "Excellent developer. Met my requirements and is very helpful! will work with him on another project for sure! He's very brave and patience! keep up your good work!."
@@ -101,34 +102,39 @@
         {
             "id": 2,
             "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/e40438712b13d0c6b0667ab913e65fad-913270731599112437022/JPEG_20200903_015356_3958061439173598869.jpg",
-            "name": "nestorm750",
+            "link":"https://www.fiverr.com/nestorm750?source=order_page_user_link",
+            "name": "Nestrom",
             "country": "United States",
             "review": "Excellent, fast, very competent and knowledgeable, very polite - highly recommended."
         },
         {
             "id": 3,
             "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/2562967/original/Netexchange.jpg",
-            "name": "netexchange",
+            "link":"https://www.fiverr.com/netexchange?source=order_page_user_link",
+            "name": "Netexchange",
             "country": "Singapore",
             "review": "Seller was prompt in his response and listened to all Buyer's requirements and carried out his responsibilities well."
         },
         {
             "id": 4,
             "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/2562967/original/Netexchange.jpg",
-            "name": "netexchange",
+            "link":"https://www.fiverr.com/netexchange?source=order_page_user_link",
+            "name": "Netexchange",
             "country": "Singapore",
             "review": "Seller was very responsible and completed his task within the timeline given. Would highly recommend the Seller for a good WordPress development project."
         },
         {
             "id": 5,
             "imageUrl": "images/placeholder-400x400.gif",
-            "name": "alberts167",
+            "link":"https://www.fiverr.com/albert167?source=order_page_user_link",
+            "name": "Albert",
             "country": "Peru",
             "review": "Awesome to work with. Great responsiveness and understanding of what was required. He provided me the best solutions and recommendations for my project."
         },
         {
             "id": 6,
-            "imageUrl": "images/placeholder-400x400.gif",
+            "imageUrl": "images/placeholder-400x400.jpg",
+            "link": "https://www.fiverr.com/ashpaddon?source=order_page_user_message_inner_link",
             "name": "Ashpaddon",
             "country": "Australia",
             "review": "The seller was very easy to work with and prompt with all requests. He went beyond what was asked of him. Thanks again. Look forward to working with you in the future."
