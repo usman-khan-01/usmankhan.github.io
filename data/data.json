@@ -1,20 +1,41 @@
 {
-    "info": {
-        "firstName": "Usman",
-        "lastName": "Khan",
-        "fullName": "Usman Khan",
-        "imageUrl": "images/ProfileImage.png",
-        "profession": "Web Developer",
-        "tagline": "I can help you achieve your goal as a web developer.",
-        "about": " I'm a web developer with experience in Asp.net Core / Mvc, Angular and WordPress. I’m currently working on Fiverr and Upwork as a freelancer in web development. I have a good understanding of Web Development with Asp.net MVC/Core, Angular and Wordpress. I’ve performed tasks related to theme integration in Angular, Asp.net MVC, WordPress and API Integration in Angular and Asp.net/Core."
-    },
+    "profileImageUrl": "images/ProfileImage.png",
+    "fullName": "Usman Khan",
+    "firstName": "Usman",
+    "lastName": "Khan",
+    "mobile": "+92-323-1481150",
+    "profession": "Web Developer",
+    "tagline": "I can help you achieve your goal as a web developer.",
+    "about": "I'm a web developer with experience in Asp.net Core / Mvc, Angular and WordPress. I'm currently working on Fiverr and Upwork as a freelancer in web development. I have a good understanding of Web Development with Asp.net MVC/Core, Angular and Wordpress. I,ve performed tasks related to theme integration in Angular, Asp.net MVC, WordPress and API Integration in Angular and Asp.net/Core.",
     "basicInfo": {
         "email": "usmangorsi@outlook.com",
-        "address": "Lahore, Pakistan",
+        "address": "Lahore District, Punjab, Pakistan",
         "languages": "Urdu, English",
         "industry": "Information Technology (IT)",
         "functionslArea": "Web Development"
     },
+    "links": [
+        {
+            "platformName": "LinkedIn",
+            "link": "https://linkedin.com/in/uk-gorsi"
+        },
+        {
+            "platformName": "github",
+            "link": "https://github.com/usman-khan-01"
+        },
+        {
+            "platformName": "hubstaff",
+            "link": "https://talent.hubstaff.com/profiles/usman-khan-5"
+        },
+        {
+            "platformName": "fiverr",
+            "link": "https://fiverr.com/usman_gorsi1"
+        },
+        {
+            "platformName": "upwork",
+            "link": "https://www.upwork.com/freelancers/~01a12c9161e7456dcc"
+        }
+    ],
     "skills": [
         {
             "name": "Html",
@@ -77,62 +98,116 @@
         },
         {
             "degree": "Intermidiate Degree / College",
-            "subject": "Bachelors in Computer Sciences",
+            "subject": "Intermediate in Computer Science",
             "institution": "Superior Group of Colleges",
             "summary": "Completed college education in 2018 form Superior Group of Colleges.",
             "yearOfGraduation": "2016 - 2018"
         },
         {
             "degree": "Bachelor's Degree",
-            "subject": "University of Computer Science",
+            "subject": "Bacheloer in Computer Science",
             "institution": "Virtual University of Pakistan",
             "summary": "Doing bachelor's degree in Computer Science form Virtual University of Pakistan.",
             "yearOfGraduation": "2018 - Onwards"
         }
     ],
+    "licensesAndCertifications": [
+        {
+            "institutionLogo": "",
+            "institution": "LinkedIn",
+            "name": "Learning C#"
+        },
+        {
+            "institutionLogo": "",
+            "institution": "LinkedIn",
+            "name": "CSS Essential Training"
+        },
+        {
+            "institutionLogo": "",
+            "institution": "LinkedIn",
+            "name": "HTML Essential Training"
+        },
+        {
+            "institutionLogo": "",
+            "institution": "LinkedIn",
+            "name": "JavaScript Essential Training"
+        },
+        {
+            "institutionLogo": "",
+            "institution": "LinkedIn",
+            "name": "Become a Software Developer"
+        },
+        {
+            "institutionLogo": "",
+            "institution": "LinkedIn",
+            "name": "Programming Foundations: Fundamentals"
+        },
+        {
+            "institutionLogo": "",
+            "institution": "LinkedIn",
+            "name": "Succeeding in Web Development: Full Stack and Front End"
+        }
+    ],
+    "experiences": [
+        {
+            "companyLogo": "images/placeholder-400x400.gif",
+            "profession": "Web Developer",
+            "company": "Fiverr Freelancers (Buyer and Seller)",
+            "duration": "Mar 2020 - Present · 2 yrs 4 mos",
+            "description": "I'm working as a freelancer on Fiverr from 2020 and have worked on multiple projects using Asp.Net Core, Asp.Net MVC, Angular, Angular Dart, and WordPress."
+        },
+        {
+            "companyLogo": "images/placeholder-400x400.gif",
+            "profession": "Web Developer",
+            "company": "Upwork",
+            "duration": "Feb 2022  - Present",
+            "description": "I'm working as a freelancer on Fiverr from Feb 2022 and working on multiple projects including Asp.Net Core, Asp.Net MVC, Angular, and WordPress."
+        },
+        {
+            "companyLogo": "images/placeholder-400x400.gif",
+            "profession": "Web Developer",
+            "company": "Gorsi Shop",
+            "duration": "Mar 2020 - Present · 2 yrs 4 mos",
+            "description": "I've worked as a Asp.Net and WordPress developer in Gorsi Shop. Gorsi Shop is a company which sells IT products. I've worked in Gorsi Shop from Mar 2018 - Feb 2020 and in that period, I've created an e-commerce website in Wordpress as well as Asp.Net Core."
+        }
+    ],
     "testimonials": [
         {
-            "id": 1,
             "imageUrl": "images/placeholder-400x400.gif",
-            "link":"https://www.fiverr.com/osamabelaama224?source=order_page_user_link",
+            "link": "https://www.fiverr.com/osamabelaama224?source=order_page_user_link",
             "name": "Osama",
             "country": "Malta",
             "review": "Excellent developer. Met my requirements and is very helpful! will work with him on another project for sure! He's very brave and patience! keep up your good work!."
         },
         {
-            "id": 2,
             "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/e40438712b13d0c6b0667ab913e65fad-913270731599112437022/JPEG_20200903_015356_3958061439173598869.jpg",
-            "link":"https://www.fiverr.com/nestorm750?source=order_page_user_link",
+            "link": "https://www.fiverr.com/nestorm750?source=order_page_user_link",
             "name": "Nestrom",
             "country": "United States",
             "review": "Excellent, fast, very competent and knowledgeable, very polite - highly recommended."
         },
         {
-            "id": 3,
             "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/2562967/original/Netexchange.jpg",
-            "link":"https://www.fiverr.com/netexchange?source=order_page_user_link",
+            "link": "https://www.fiverr.com/netexchange?source=order_page_user_link",
             "name": "Netexchange",
             "country": "Singapore",
             "review": "Seller was prompt in his response and listened to all Buyer's requirements and carried out his responsibilities well."
         },
         {
-            "id": 4,
             "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/2562967/original/Netexchange.jpg",
-            "link":"https://www.fiverr.com/netexchange?source=order_page_user_link",
+            "link": "https://www.fiverr.com/netexchange?source=order_page_user_link",
             "name": "Netexchange",
             "country": "Singapore",
             "review": "Seller was very responsible and completed his task within the timeline given. Would highly recommend the Seller for a good WordPress development project."
         },
         {
-            "id": 5,
             "imageUrl": "images/placeholder-400x400.gif",
-            "link":"https://www.fiverr.com/albert167?source=order_page_user_link",
+            "link": "https://www.fiverr.com/albert167?source=order_page_user_link",
             "name": "Albert",
             "country": "Peru",
             "review": "Awesome to work with. Great responsiveness and understanding of what was required. He provided me the best solutions and recommendations for my project."
         },
         {
-            "id": 6,
             "imageUrl": "images/placeholder-400x400.jpg",
             "link": "https://www.fiverr.com/ashpaddon?source=order_page_user_message_inner_link",
             "name": "Ashpaddon",

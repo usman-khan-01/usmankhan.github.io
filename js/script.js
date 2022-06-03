@@ -1,12 +1,16 @@
+
+
+var doc = new jsPDF('p', 'pt', 'legal');
+
 // data
 $(function () {
     $.getJSON('../data/data.json', function (data) {
         // basic info
-        $('.navbar-brand').append(data.info.fullName);
-        $('.name').append(data.info.fullName);
-        $('.category').append(data.info.profession);
-        document.querySelector('.profile-image').src = data.info.imageUrl;
-        $('.aboutMe').append(data.info.about);
+        $('.navbar-brand').append(data.fullName);
+        $('.name').append(data.fullName);
+        $('.category').append(data.profession);
+        document.querySelector('.profile-image').src = data.profileImageUrl;
+        $('.aboutMe').append(data.about);
         var basicInformation = ["Email", "Address", "Languages", "Industry", "Functionsl Area"];
         $.each(basicInformation, function (i, value) { $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'); });
         $.each(data.basicInfo, function (i, value) { $('.pInfoValue').append(value + '<br><br>'); });
@@ -51,7 +55,7 @@ $(function () {
         // testimonial
         $.each(data.testimonials, function (i, testimonial) {
             $('.carousel-indicators').append(`<li class="carousel-indicator" data-target="#cc-Indicators" dataSlideTo="0"></li>`);
-            if (testimonial.id == 1) {
+            if (i == 0) {
                 $('.carousel-indicator').addClass('active');
                 $('.carousel-inner').append(`<div class="carousel-item active">
                     <div class="row testimonial">
@@ -80,5 +84,51 @@ $(function () {
 
         // experience
 
+
+        //#region pdf data
+        $('.username_pdf').append(data.fullName);
+        $('.address_pdf').append(data.basicaddress);
+        $('.mailAndMobile_pdf').append(data.basicInfo.email + '<span class="tabSpace"></span>' + data.mobile);
+        $('.about_pdf').append(data.about);
+        var text = $('.linkedIn_pdf').append(`linkedin.com/in/uk-gorsi`);
+        // doc.textWithLink(text, { url: getPlatformName(data.links) });
+        document.querySelector('.linkedIn_pdf').href = getPlatformName(data.links);
+        $.each(data.skills, (i, skill) => $('.skill_pdf').append(`<li>${skill.name}</li>`));
+        $.each(data.education, (i, edu) => $('.education_pdf').append(`<p>${edu.institution} - ${edu.subject}<br>${edu.yearOfGraduation}</p><br>`));
+        $.each(data.experiences, (i, exp) => $('.experience_pdf').append(`<p><b>${exp.profession} - ${exp.company}</b><br>${exp.duration}<br>${exp.description}</p><br>`));
+        $.each(data.licensesAndCertifications, (i, lcct) => $('.licensesAndCertifications_pdf').append(`<p><b>${lcct.name}</b> - ${lcct.institution}</p>`));
+        //#endregion pdf data
+
+        // generate pdf
+        $(document).on('click', '#gpdf', function () {
+            // doc.splitTextToSize(data.about, 50);
+            // doc.textWithLink('linkedin.com/in/uk-gorsi', {url: getPlatformName(data.links)});
+            doc.fromHTML($("#pdf").html(), 20, 0, {
+                width: 550,
+                pagesplit: true
+            });
+            doc.save(`${data.fullName}'s CV.pdf`);
+        });
     });
 });
+
+getPlatformName = (data) => data[0].link;
+
+
+
+//#region json to pdf jsPDF
+// var doc = new jsPDF();
+// $(document).on('click', '#gpdf', function (event) {
+//     doc.text(10, 10,
+//         `${data.info.fullName}` + '\n' + `${data.basicInfo.address}` + '\n\n' +
+//         `${data.basicInfo.email}` + '\t\t\t' + `${data.info.mobileNumber}` + '\n\n\n' +
+//         `${getPlatformName(data.links)}` + '\n\n' + `Summary` + '\n' + `${data.info.about}` + '\n\n' +
+//         ``
+//     )
+//     // 📧
+//     doc.save(`${data.info.fullName}'s CV.pdf`);
+// });
+//#endregion json to pdf jsPDF
+
+
+
