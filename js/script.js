@@ -88,7 +88,7 @@ $(function () {
         //#region pdf data
         $('.username_pdf').append(data.fullName);
         $('.address_pdf').append(data.basicaddress);
-        $('.mailAndMobile_pdf').append(data.basicInfo.email + '<span class="tabSpace"></span>' + data.mobile);
+        $('.mailAndMobile_pdf').append(data.basicInfo.email + '<br>' + data.mobile);
         $('.about_pdf').append(data.about);
         var text = $('.linkedIn_pdf').append(`linkedin.com/in/uk-gorsi`);
         // doc.textWithLink(text, { url: getPlatformName(data.links) });

@@ -54,6 +54,10 @@
             "percentage": 80
         },
         {
+            "name": "WordPress",
+            "percentage": 80
+        },
+        {
             "name": "Angular",
             "percentage": 75
         },
