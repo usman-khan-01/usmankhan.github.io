@@ -6,8 +6,7 @@ var img = new Image();
 $(function () {
     $.getJSON('../data/data.json', function (data) {
         // basic info
-        $('.navbar-brand').append(data.fullName);
-        $('.name').append(data.fullName);
+        $('.navbar-brand, .name').append(data.fullName);
         $('.category').append(data.profession);
         document.querySelector('.profile-image').src = data.profileImageUrl;
         $('.aboutMe').append(data.about);
@@ -28,7 +27,7 @@ $(function () {
 
         // portfolio
         $.each(data.portfolios, function (i, portfolio) {
-            $('.portfolios').append(`<div class="tab-content gallery mt-5 col-md-6">
+            $('.portfolios').append(`<div class="tab-content gallery mt-5 col-md-6" style="padding-bottom: 20px">
                 <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                 <a href="${portfolio.link}" target="_blank">
                 <figure class="cc-effect"><img src="${portfolio.imageUrl}" alt="Image" />
@@ -39,17 +38,17 @@ $(function () {
         // education
         $.each(data.education, function (i, edu) {
             $('.cc-education').append(`
-        <div class="card">
-            <div class="row education">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-        <div class="card-body cc-education-header">
-        <p>${edu.yearOfGraduation}</p>
-        <div class="h5">${edu.degree}</div></div></div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-        <div class="card-body">
-        <div class="h5">${edu.subject}</div>
-        <p class="category">${edu.institution}</p>
-        <p>${edu.summary}</p></div></div></div></div></div>`);
+                <div class="card">
+                <div class="row education">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                <div class="card-body cc-education-header">
+                <p>${edu.yearOfGraduation}</p>
+                <div class="h5">${edu.degree}</div></div></div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                <div class="card-body">
+                <div class="h5">${edu.subject}</div>
+                <p class="category">${edu.institution}</p>
+                <p>${edu.summary}</p></div></div></div></div></div>`);
         });
 
         // testimonial
@@ -108,8 +107,8 @@ $(function () {
             //     onrendered: function (canvas) {
             //     }
             // })
-            img.src = data.profileImageUrl;
-            doc.addImage(img, 'png', 10, 78, 12, 15);
+            // img.src = data.profileImageUrl;
+            // doc.addImage(img, 'png', 10, 78, 12, 15);
             doc.fromHTML($("#pdf").html(), 20, 0, {
                 width: 550,
                 pagesplit: true
