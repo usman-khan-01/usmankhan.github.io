@@ -1,7 +1,7 @@
 
 
 var doc = new jsPDF('p', 'pt', 'legal');
-
+var img = new Image();
 // data
 $(function () {
     $.getJSON('../data/data.json', function (data) {
@@ -103,10 +103,18 @@ $(function () {
         $(document).on('click', '#gpdf', function () {
             // doc.splitTextToSize(data.about, 50);
             // doc.textWithLink('linkedin.com/in/uk-gorsi', {url: getPlatformName(data.links)});
+            // html2canvas('#pdf', {
+            //     useCORS: true,
+            //     onrendered: function (canvas) {
+            //     }
+            // })
+            img.src = data.profileImageUrl;
+            doc.addImage(img, 'png', 10, 78, 12, 15);
             doc.fromHTML($("#pdf").html(), 20, 0, {
                 width: 550,
                 pagesplit: true
             });
+            // window.open(imageData);
             doc.save(`${data.fullName}'s CV.pdf`);
         });
     });
