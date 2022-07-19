@@ -12,7 +12,7 @@ var img = new Image();
             "Content-Type": "application/json",
             "Accept": "*/*",
             // "Access-Control-Allow-Origin": 'http://localhost:5500',
-            "Access-Control-Allow-Origin": 'https://usman-khan-01.github.io',
+            // "Access-Control-Allow-Origin": 'https://usman-khan-01.github.io',
         },
         body: JSON.stringify({
             query: `query getMyResume($token:String!){
