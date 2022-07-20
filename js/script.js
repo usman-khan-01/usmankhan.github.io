@@ -9,8 +9,8 @@ var img = new Image();
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
-            "Accept": "*/*"
-            // "Access-Control-Allow-Origin": 'http://localhost:4200',
+            "Accept": "*/*",
+            "Access-Control-Allow-Origin": 'https://usman-khan-01.github.io/',
         },
         body: JSON.stringify({
             query: `query getMyResume($token:String!){
@@ -25,9 +25,7 @@ var img = new Image();
         })
     });
     const body = await response.json();
-    console.log("🚀 ~ file: script.js ~ line 28 ~ body", body);
     var data = JSON.parse(body.data.getbyaccesstoken.jsonData);
-    console.log("🚀 ~ file: script.js ~ line 29 ~ data", data);
     // basic info
     $('.navbar-brand, .name').append(data.fullName);
     $('.category').append(data.profession);
