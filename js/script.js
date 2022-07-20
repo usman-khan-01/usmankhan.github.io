@@ -10,7 +10,7 @@ var img = new Image();
         headers: {
             "Content-Type": "application/json",
             "Accept": "*/*",
-            "Access-Control-Allow-Origin": 'null',
+            // "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
             query: `query getMyResume($token:String!){
