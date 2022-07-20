@@ -9,7 +9,8 @@ var img = new Image();
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
-            "Accept": "*/*",
+            "Accept": "*/*"
+            // "Access-Control-Allow-Origin": 'http://localhost:4200',
         },
         body: JSON.stringify({
             query: `query getMyResume($token:String!){
