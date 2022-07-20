@@ -25,7 +25,9 @@ var img = new Image();
         })
     });
     const body = await response.json();
+    console.log("🚀 ~ file: script.js ~ line 28 ~ body", body);
     var data = JSON.parse(body.data.getbyaccesstoken.jsonData);
+    console.log("🚀 ~ file: script.js ~ line 29 ~ data", data);
     // basic info
     $('.navbar-brand, .name').append(data.fullName);
     $('.category').append(data.profession);
