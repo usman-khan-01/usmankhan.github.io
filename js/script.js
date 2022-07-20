@@ -5,8 +5,8 @@ var img = new Image();
 
 // data
 (async () => {
-    // const response = await fetch('https://cors-anywhere.herokuapp.com/https://graph.perspective-v.com/api/resume', {
-    const response = await fetch('https://graph.perspective-v.com/api/resume', {
+    const response = await fetch('https://cors-anywhere.herokuapp.com/https://graph.perspective-v.com/api/resume', {
+    // const response = await fetch('https://graph.perspective-v.com/api/resume', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
