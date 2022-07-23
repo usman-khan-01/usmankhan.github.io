@@ -1,7 +1,6 @@
-
-
 var doc = new jsPDF('p', 'pt', 'legal');
 var img = new Image();
+getPlatformName = (data) => data[0].link;
 
 // data
 (async () => {
@@ -101,8 +100,6 @@ var img = new Image();
         }
     });
 
-    // experience
-
     //#region pdf data
     $('.username_pdf').append(data.fullName);
     $('.address_pdf').append(data.basicaddress);
@@ -117,7 +114,7 @@ var img = new Image();
     $.each(data.licensesAndCertifications, (i, lcct) => $('.licensesAndCertifications_pdf').append(`<p><b>${lcct.name}</b> - ${lcct.institution}</p>`));
     //#endregion pdf data
 
-    // generate pdf
+    //#region generate pdf
     $(document).on('click', '#gpdf', function () {
         // doc.splitTextToSize(data.about, 50);
         // doc.textWithLink('linkedin.com/in/uk-gorsi', {url: getPlatformName(data.links)});
@@ -135,15 +132,8 @@ var img = new Image();
         // window.open(imageData);
         doc.save(`${data.fullName}'s CV.pdf`);
     });
-})();
-
-getPlatformName = (data) => data[0].link;
-
-
-// $(function () {
-//     $.getJSON('../data/data.json', function (data) {
-//     });
-// });
+    //#endregion generate pdf
+})(); 
 
 //#region json to pdf jsPDF
 // var doc = new jsPDF();
