@@ -28,7 +28,7 @@ getPlatformName = (s) => console.log(s[0].link);
     $('.navbar-brand, .name').append(data.fullName);
     $('.category').append(data.profession);
     document.querySelector('.profile-image').src = data.profileImageUrl;
-    document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socailLinks);
+    // document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socailLinks);
     $('.aboutMe').append(data.about);
     var basicInformation = ["Email", "Address", "Languages", "Industry", "Functionsl Area"];
     $.each(basicInformation, function (i, value) { $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'); });
