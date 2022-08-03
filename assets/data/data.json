@@ -4,8 +4,8 @@
     "lastName": "Khan",
     "profession": "Web Developer",
     "tagline": "I can help you achieve your goal as a web developer",
-    "profileImageUrl": "images/portfolio-images/profile-image.png",
-    "about": " I'm a experienced web developer in Asp.net, Angular, WordPress and working on Fiverr and Upwork. I've reasonable amount of knowledge in web development. I’ve completed theme integration in Angular, Asp.net, WordPress as well as API Integration in Angular and Asp.net.",
+    "profileImageUrl": "assets/images/portfolio-images/profile-image.png",
+    "about": " I'm a experienced web developer in Asp.net, Angular, WordPress and working on Fiverr and Upwork. I've reasonable amount of knowledge in web development. I've completed theme integration in Angular, Asp.net, WordPress as well as API Integration in Angular and Asp.net.",
     "basicInfo": {
         "mobile": "+92-323-1481150",
         "email": "usmangorsi@outlook.com",
@@ -17,19 +17,19 @@
             "link": "https://pk.linkedin.com/in/uk-gorsi"
         },
         {
-            "platformName": "github",
+            "platformName": "Github",
             "link": "https://github.com/usman-khan-01"
         },
         {
-            "platformName": "hubstaff",
+            "platformName": "Hubstaff",
             "link": "https://talent.hubstaff.com/profiles/usman-khan-5"
         },
         {
-            "platformName": "fiverr",
+            "platformName": "Fiverr",
             "link": "https://fiverr.com/usman_gorsi1"
         },
         {
-            "platformName": "upwork",
+            "platformName": "Upwork",
             "link": "https://www.upwork.com/freelancers/~01a12c9161e7456dcc"
         }
     ],
@@ -39,21 +39,21 @@
             "profession": "Web Developer",
             "duration": "Mar 2020 - Present",
             "companyLogo": "images/placeholder-400x400.gif",
-            "description": "I’ve been working as a freelancer on Fiverr from 2020 and have worked on multiple projects using Asp.Net Core, Asp.Net MVC, Angular, Angular Dart, and WordPress"
+            "description": "I've been working as a freelancer on Fiverr from 2020 and have worked on multiple projects using Asp.Net Core, Asp.Net MVC, Angular, Angular Dart, and WordPress."
         },
         {
             "company": "Upwork",
             "profession": "Web Developer",
             "duration": "Feb 2020 - Present",
             "companyLogo": "images/placeholder-400x400.gif",
-            "description": "I am a level 1 seller on the Fiverr with more than 2+ years and i have 5 Star rating on fiverr."
+            "description": "Working as a freelance web developer on upwork in Asp.Net Core / MVC, Angular and WordPress."
         },
         {
             "company": "Gorsi Shop",
             "profession": "Web Developer",
             "duration": "Mar 2018 - Jan 2020",
             "companyLogo": "images/placeholder-400x400.gif",
-            "description": "I’ve worked as a Asp.Net Core and WordPress developer in Gorsi Shop. Gorsi Shop is an online store which sells IT Products. I've worked for in Gorsi Shop from Mar 2018 – Feb 2020 and in that period, I've created an e-commerce website in WordPress as well as Asp.Net Core"
+            "description": "I've worked as a Asp.Net Core and WordPress developer in Gorsi Shop. Gorsi Shop is an online store which sells IT Products. I've worked for in Gorsi Shop from Mar 2018 - Feb 2020 and in that period, I've created an e-commerce website in WordPress as well as Asp.Net Core."
         }
     ],
     "education": [
@@ -157,13 +157,13 @@
     "portfolios": [
         {
             "name": "Roofers FZC",
-            "imageUrl": "images/portfolios/rooferz-fzc-banner.jpg",
+            "imageUrl": "assets/images/portfolios/rooferz-fzc-banner.jpg",
             "framework": "WordPress",
             "link": "https://roofersfzc.net/"
         },
         {
             "name": "Tamino Autograph",
-            "imageUrl": "images/portfolios/tamino-autograph.png",
+            "imageUrl": "assets/images/portfolios/tamino-autograph.png",
             "framework": "WordPress",
             "link": " https://www.taminoautographs.com/blogs/autograph-blog"
         }
