@@ -4,12 +4,14 @@
     "lastName": "Khan",
     "profession": "Web Developer",
     "tagline": "I can help you achieve your goal as a web developer",
-    "profileImageUrl": "assets/images/portfolio-images/profile-image.png",
+    "profileImageUrl": "assets/images/profile/profile-image.png",
     "about": " I'm a experienced web developer in Asp.net, Angular, WordPress and working on Fiverr and Upwork. I've reasonable amount of knowledge in web development. I've completed theme integration in Angular, Asp.net, WordPress as well as API Integration in Angular and Asp.net.",
     "basicInfo": {
         "mobile": "+92-323-1481150",
         "email": "usmangorsi@outlook.com",
-        "address": "Lahore District, Punjab, Pakistan"
+        "address": "Lahore District, Punjab, Pakistan",
+        "industry": "Information Technologies",
+        "languages": "Urdu, English, Punjabi"
     },
     "socialLinks": [
         {
@@ -131,27 +133,41 @@
             "percentage": "60"
         }
     ],
-    "languages": [
+    "testimonials": [
         {
-            "name": "English",
-            "status": "Function Knowledge"
+            "name": "Ashpaddon",
+            "link": "https://www.fiverr.com/ashpaddon",
+            "imageUrl": "assets/images/profile/f-placeholder-400x400.jpg",
+            "country": "Australia",
+            "review": "The seller was very easy to work with and prompt with all requests. He went beyond what was asked of him. Thanks again. Look forward to working with you in the future."
         },
         {
-            "name": "Urdu",
-            "status": "Native"
+            "name": "Netexchange",
+            "link": "https://www.fiverr.com/netexchange",
+            "imageUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/2562967/original/Netexchange.jpg",
+            "country": "Singapore",
+            "review": "Seller was very responsible and completed his task within the timeline given. Would highly recommend the Seller for a good WordPress development project."
         },
         {
-            "name": "Punjabi",
-            "status": "Native"
-        }
-    ],
-    "testimonals": [
+            "name": "Netexchange",
+            "link": "https://www.fiverr.com/netexchange",
+            "imageUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/2562967/original/Netexchange.jpg",
+            "country": "Singapore",
+            "review": "Seller was polite, did more than required and has a lot of passion in what he does. This is the 2nd time I have engaged his Services."
+        },
         {
-            "name": "Jhonsmither",
-            "link": "",
-            "imageUrl": "",
-            "country": "Pakistan",
-            "review": "Asad khan was great! 5 Starts are less for his awesome fast delivery really wasn't sure what i wanted for my logo and he came up with a logo for me. I really love the logo and my twitch overlay design. i will definitely work with Him again and recommend him to others."
+            "name": "Nestorm750",
+            "link": "https://www.fiverr.com/nestorm750",
+            "imageUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/e40438712b13d0c6b0667ab913e65fad-913270731599112437022/JPEG_20200903_015356_3958061439173598869.jpg",
+            "country": "United States",
+            "review": "excellent, fast, very competent and knowledgeable, very polite - highly recommended."
+        },
+        {
+            "name": "Alberts167",
+            "link": "https://www.fiverr.com/alberts167",
+            "imageUrl": "assets/images/profile/m-placeholder-400x400.gif",
+            "country": "Peru",
+            "review": "Awesome to work with. Great responsiveness and understanding of what was required. He provided me the best solutions and recommendations for my project."
         }
     ],
     "portfolios": [
