@@ -1,6 +1,6 @@
 var doc = new jsPDF('p', 'pt', 'legal');
 var img = new Image();
-getPlatformName = (data) => data[0].link;
+getPlatformName = (s) => console.log(s[0].link);
 
 // data
 (async () => {
@@ -28,6 +28,7 @@ getPlatformName = (data) => data[0].link;
     $('.navbar-brand, .name').append(data.fullName);
     $('.category').append(data.profession);
     document.querySelector('.profile-image').src = data.profileImageUrl;
+    document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socailLinks);
     $('.aboutMe').append(data.about);
     var basicInformation = ["Email", "Address", "Languages", "Industry", "Functionsl Area"];
     $.each(basicInformation, function (i, value) { $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'); });
@@ -103,9 +104,8 @@ getPlatformName = (data) => data[0].link;
     //#region pdf data
     $('.username_pdf').append(data.fullName);
     $('.address_pdf').append(data.basicaddress);
-    $('.mailAndMobile_pdf').append(data.basicInfo.email + '<br>' + data.mobile);
+    $('.mailAndMobile_pdf').append(data.basicInfo.email + '<br>' + data.basicInfo.mobile);
     $('.about_pdf').append(data.about);
-    var text = $('.linkedIn_pdf').append(`linkedin.com/in/uk-gorsi`);
     // doc.textWithLink(text, { url: getPlatformName(data.links) });
     document.querySelector('.linkedIn_pdf').href = getPlatformName(data.links);
     $.each(data.skills, (i, skill) => $('.skill_pdf').append(`<li>${skill.name}</li>`));

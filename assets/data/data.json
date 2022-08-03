@@ -1,0 +1,174 @@
+{
+    "fullName": "Usman Khan",
+    "firstName": "Usman",
+    "lastName": "Khan",
+    "profession": "Web Developer",
+    "tagline": "I can help you achieve your goal as a web developer",
+    "profileImageUrl": "images/portfolio-images/profile-image.png",
+    "about": " I'm a experienced web developer in Asp.net, Angular, WordPress and working on Fiverr and Upwork. I've reasonable amount of knowledge in web development. I’ve completed theme integration in Angular, Asp.net, WordPress as well as API Integration in Angular and Asp.net.",
+    "basicInfo": {
+        "mobile": "+92-323-1481150",
+        "email": "usmangorsi@outlook.com",
+        "address": "Lahore District, Punjab, Pakistan"
+    },
+    "socialLinks": [
+        {
+            "platformName": "LinkedIn",
+            "link": "https://pk.linkedin.com/in/uk-gorsi"
+        },
+        {
+            "platformName": "github",
+            "link": "https://github.com/usman-khan-01"
+        },
+        {
+            "platformName": "hubstaff",
+            "link": "https://talent.hubstaff.com/profiles/usman-khan-5"
+        },
+        {
+            "platformName": "fiverr",
+            "link": "https://fiverr.com/usman_gorsi1"
+        },
+        {
+            "platformName": "upwork",
+            "link": "https://www.upwork.com/freelancers/~01a12c9161e7456dcc"
+        }
+    ],
+    "experiences": [
+        {
+            "company": "Fiverr Freelancers (Buyer and Seller)",
+            "profession": "Web Developer",
+            "duration": "Mar 2020 - Present",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "I’ve been working as a freelancer on Fiverr from 2020 and have worked on multiple projects using Asp.Net Core, Asp.Net MVC, Angular, Angular Dart, and WordPress"
+        },
+        {
+            "company": "Upwork",
+            "profession": "Web Developer",
+            "duration": "Feb 2020 - Present",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "I am a level 1 seller on the Fiverr with more than 2+ years and i have 5 Star rating on fiverr."
+        },
+        {
+            "company": "Gorsi Shop",
+            "profession": "Web Developer",
+            "duration": "Mar 2018 - Jan 2020",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "I’ve worked as a Asp.Net Core and WordPress developer in Gorsi Shop. Gorsi Shop is an online store which sells IT Products. I've worked for in Gorsi Shop from Mar 2018 – Feb 2020 and in that period, I've created an e-commerce website in WordPress as well as Asp.Net Core"
+        }
+    ],
+    "education": [
+        {
+            "institution": "Jinnah Public School",
+            "degree": "High School",
+            "subject": "Metric in Biology",
+            "summary": "I've completed my high school education from jannah Public School located in Gujrat.",
+            "yearOfGraduation": "2014 - 2016"
+        },
+        {
+            "institution": "Superior Group of Colleges",
+            "degree": "College Education",
+            "subject": "Computer Science",
+            "summary": "I've completed my intermediate education in the field of computer science in 2018.",
+            "yearOfGraduation": "2017"
+        },
+        {
+            "institution": "Virtual University of Pakistan",
+            "degree": "University",
+            "subject": "Computer Science",
+            "summary": "I've completed my intermediate education in the field of computer science in 2018.",
+            "yearOfGraduation": "2017"
+        }
+    ],
+    "licensesAndCertifications": [
+        {
+            "institutionLogo": "",
+            "institution": "Linkedin Learning",
+            "name": "Programming Foundations: Fundamentals ",
+            "duration": "2019"
+        },
+        {
+            "institutionLogo": "",
+            "institution": "Linkedin Learning",
+            "name": "HTML Essential Training",
+            "duration": "2020"
+        }
+    ],
+    "skills": [
+        {
+            "name": "HTML",
+            "percentage": "90"
+        },
+        {
+            "name": "CSS / SCSS",
+            "percentage": "80"
+        },
+        {
+            "name": "JavaScript",
+            "percentage": "80"
+        },
+        {
+            "name": "WordPress",
+            "percentage": "80"
+        },
+        {
+            "name": "Razor Pages",
+            "percentage": "80"
+        },
+        {
+            "name": "C#",
+            "percentage": "70"
+        },
+        {
+            "name": "Asp.Net Stack",
+            "percentage": "70"
+        },
+        {
+            "name": "Angular",
+            "percentage": "70"
+        },
+        {
+            "name": "Object-Oriented-Programming / OOP",
+            "percentage": "60"
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "status": "Function Knowledge"
+        },
+        {
+            "name": "Urdu",
+            "status": "Native"
+        },
+        {
+            "name": "Punjabi",
+            "status": "Native"
+        }
+    ],
+    "testimonals": [
+        {
+            "name": "Jhonsmither",
+            "link": "",
+            "imageUrl": "",
+            "country": "Pakistan",
+            "review": "Asad khan was great! 5 Starts are less for his awesome fast delivery really wasn't sure what i wanted for my logo and he came up with a logo for me. I really love the logo and my twitch overlay design. i will definitely work with Him again and recommend him to others."
+        }
+    ],
+    "portfolios": [
+        {
+            "name": "Roofers FZC",
+            "imageUrl": "images/portfolios/rooferz-fzc-banner.jpg",
+            "framework": "WordPress",
+            "link": "https://roofersfzc.net/"
+        },
+        {
+            "name": "Tamino Autograph",
+            "imageUrl": "images/portfolios/tamino-autograph.png",
+            "framework": "WordPress",
+            "link": " https://www.taminoautographs.com/blogs/autograph-blog"
+        }
+    ],
+    "services": [
+        {}
+    ]
+}
