@@ -148,5 +148,3 @@ getPlatformName = (data) => data[0].link;
 //     doc.save(`${data.info.fullName}'s CV.pdf`);
 // });
 //#endregion json to pdf jsPDF
-
-
