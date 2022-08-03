@@ -83,16 +83,46 @@
     ],
     "licensesAndCertifications": [
         {
-            "institutionLogo": "",
-            "institution": "Linkedin Learning",
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/16c346e9eff4094ab057a9ddf02d8435c031079e74df66aaeeee1fccdf11644e?trk=share_certificate",
+            "institution": "LinkedIn Learning",
             "name": "Programming Foundations: Fundamentals ",
-            "duration": "2019"
+            "CompletionDate": "2020"
         },
         {
-            "institutionLogo": "",
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/92f0af3ceefa18248fc07fd75135bddd64752fa06398220143885d43319e6e46?trk=share_certificate",
             "institution": "Linkedin Learning",
             "name": "HTML Essential Training",
-            "duration": "2020"
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/e1f63ea882ae0c590f14e8be1ecd133f2f9a1b7b39792bbb3bf831acc6ab41f1?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "Succeeding in Web Development: Full Stack and Front End",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/9855cd030e38b7570037046d076c3b67ff95f4480c4746d05cb1f23b6ab783e7?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "Programming Foundations: Databases",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/623c0ca9fa112b8808758daef3dcdd3d10f8fc9a3516bc89dd0411a8fe02d4ff?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "JavaScript Essential Training (2017)",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/cd40eb98ee432b645e76c41738f0f2b0d821c5193541f437feb2d4c1529f4319?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "CSS Essential Training",
+            "CompletionDate": "2020"
         }
     ],
     "skills": [
@@ -121,12 +151,16 @@
             "percentage": "70"
         },
         {
-            "name": "Asp.Net Stack",
+            "name": "Asp.Net Core / MVC",
             "percentage": "70"
         },
         {
             "name": "Angular",
             "percentage": "70"
+        },
+        {
+            "name": "Entity Framework Core",
+            "percentage": "60"
         },
         {
             "name": "Object-Oriented-Programming / OOP",

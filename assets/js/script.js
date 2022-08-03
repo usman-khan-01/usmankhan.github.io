@@ -126,11 +126,11 @@ getPlatformName = (s) => console.log(s[0].link);
     $('.mailAndMobile_pdf').append(data.basicInfo.email + '<br>' + data.basicInfo.mobile);
     $('.about_pdf').append(data.about);
     // doc.textWithLink(text, {url: getPlatformName(data.links) });
-    document.querySelector('.linkedIn_pdf').href = getPlatformName(data.links);
+    document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socialLinks);
     $.each(data.skills, (i, skill) => $('.skill_pdf').append(`<li>${skill.name}</li>`));
     $.each(data.education, (i, edu) => $('.education_pdf').append(`<p>${edu.institution} - ${edu.subject}<br>${edu.yearOfGraduation}</p><br>`));
     $.each(data.experiences, (i, exp) => $('.experience_pdf').append(`<p><b>${exp.profession} - ${exp.company}</b><br>${exp.duration}<br>${exp.description}</p><br>`));
-    $.each(data.licensesAndCertifications, (i, lcct) => $('.licensesAndCertifications_pdf').append(`<p><b>${lcct.name}</b> - ${lcct.institution}</p>`));
+    $.each(data.licensesAndCertifications, (i, lcct) => $('.licensesAndCertifications_pdf').append(`<p><a href="${lcct.link}"><b>${lcct.name}</b></a> - ${lcct.institution}</p>`));
     //#endregion pdf data
 
     //#region generate pdf
