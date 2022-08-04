@@ -68,17 +68,17 @@
         },
         {
             "institution": "Superior Group of Colleges",
-            "degree": "College Education",
+            "degree": "Intermediate",
             "subject": "Computer Science",
             "summary": "I've completed my intermediate education in the field of computer science in 2018.",
-            "yearOfGraduation": "2017"
+            "yearOfGraduation": "2016 - 2018"
         },
         {
             "institution": "Virtual University of Pakistan",
-            "degree": "University",
+            "degree": "Bscs",
             "subject": "Computer Science",
-            "summary": "I've completed my intermediate education in the field of computer science in 2018.",
-            "yearOfGraduation": "2017"
+            "summary": "I'm currently doing my bechelors in computer science from virtual university.",
+            "yearOfGraduation": "2018 - Onwards"
         }
     ],
     "licensesAndCertifications": [
