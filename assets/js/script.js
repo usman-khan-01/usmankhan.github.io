@@ -31,8 +31,8 @@ getPlatformName = (s) => console.log(s[0].link);
     // document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socailLinks);
     $('.aboutMe').append(data.about);
     var basicInformation = ["Mobile", "Email", "Address", "Industry", "Languages"];
-    $.each(basicInformation, function (i, value) { $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'); });
-    $.each(data.basicInfo, function (i, value) { $('.pInfoValue').append(value + '<br><br>'); });
+    $.each(basicInformation, (i, value) => $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'));
+    $.each(data.basicInfo, (i, value) => $('.pInfoValue').append((value != null && value === 'usmangorsi@outlook.com') ? `<a href="mailto:${value}">${value}</a><br><br>` : value + '<br><br>'));
 
     // skills
     $.each(data.skills, function (i, skill) {

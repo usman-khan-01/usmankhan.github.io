@@ -5,7 +5,7 @@
     "profession": "Web Developer",
     "tagline": "I can help you achieve your goal as a web developer",
     "profileImageUrl": "assets/images/profile/profile-image.png",
-    "about": " I'm a experienced web developer in Asp.net, Angular, WordPress and working on Fiverr and Upwork. I've reasonable amount of knowledge in web development. I've completed theme integration in Angular, Asp.net, WordPress as well as API Integration in Angular and Asp.net.",
+    "about": "I'm an experienced web developer in Asp.net, Angular, WordPress and currently working on Fiverr and Upwork. I've reasonable amount of knowledge in my field. I’ve completed theme integration in Angular, Asp.net, WordPress as well as API Integration in Angular and Asp.net.",
     "basicInfo": {
         "mobile": "+92-323-1481150",
         "email": "usmangorsi@outlook.com",
@@ -143,6 +143,14 @@
             "percentage": "80"
         },
         {
+            "name": "Elementor Page Builder",
+            "percentage": "80"
+        },
+        {
+            "name": "Beaver Builder",
+            "percentage": "80"
+        },
+        {
             "name": "Razor Pages",
             "percentage": "80"
         },
@@ -163,7 +171,7 @@
             "percentage": "60"
         },
         {
-            "name": "Object-Oriented-Programming / OOP",
+            "name": "Object Oriented Programming / OOP",
             "percentage": "60"
         }
     ],
