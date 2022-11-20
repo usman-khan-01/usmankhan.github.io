@@ -1,5 +1,7 @@
 var doc = new jsPDF('p', 'pt', 'legal');
 var img = new Image();
+var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
 getPlatformName = (s) => console.log(s[0].link);
 
 // data
@@ -32,7 +34,7 @@ getPlatformName = (s) => console.log(s[0].link);
     $('.aboutMe').append(data.about);
     var basicInformation = ["Mobile", "Email", "Address", "Industry", "Languages"];
     $.each(basicInformation, (i, value) => $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'));
-    $.each(data.basicInfo, (i, value) => $('.pInfoValue').append((value != null && value === 'usmangorsi@outlook.com') ? `<a href="mailto:${value}">${value}</a><br><br>` : value + '<br><br>'));
+    $.each(data.basicInfo, (i, value) => $('.pInfoValue').append((value != null && value === `${/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/g}`) ? `<a href="mailto:${value}">${value}</a><br><br>` : value + '<br><br>'));
 
     // skills
     $.each(data.skills, function (i, skill) {
