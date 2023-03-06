@@ -6,7 +6,7 @@ getPlatformName = (s) => console.log(s[0].link);
 
 // data
 (async () => {
-    const response = await fetch('https://graph.perspective-v.com/api/resume', {
+    const response = await fetch('https://api.perspective-v.com/gateway/graph/resume', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
