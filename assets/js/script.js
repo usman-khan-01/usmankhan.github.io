@@ -20,7 +20,7 @@ getPlatformName = (s) => console.log(s[0].link);
                 }
               }`,
             variables: {
-                token: 'gomjEIoerEKXeTF7tS8Syg=='
+                token: 'FS6Tgrq/T0qblqiuIg7i4Q=='
             }
         })
     });
