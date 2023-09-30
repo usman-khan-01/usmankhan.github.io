@@ -13,10 +13,11 @@ getPlatformName = (s) => console.log(s[0].link);
             "Accept": "*/*",
         },
         body: JSON.stringify({
-            query: `query getMyResume($token:String!){
-                getbyaccesstoken(accesToken:$token){
-                  name,
+            query: `query getByAccessToken($accessToken:String!){
+                getByAccessToken(accesToken: $accessToken) {
+                  name
                   jsonData
+                  htmlTemplate
                 }
               }`,
             variables: {
