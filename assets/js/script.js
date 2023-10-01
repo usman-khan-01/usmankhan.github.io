@@ -13,20 +13,20 @@ getPlatformName = (s) => console.log(s[0].link);
             "Accept": "*/*",
         },
         body: JSON.stringify({
-            query: `query getByAccessToken($accessToken:String!){
-                getByAccessToken(accesToken: $accessToken) {
-                  name
-                  jsonData
-                  htmlTemplate
-                }
-              }`,
+            query: `query getMyResume($token:String!){
+                getByAccessToken(accesToken:$token){
+                      name,
+                      htmlTemplate,
+                      jsonData
+                    }
+                  }`,
             variables: {
                 token: 'FS6Tgrq/T0qblqiuIg7i4Q=='
             }
         })
     });
     const body = await response.json();
-    var data = JSON.parse(body.data.getbyaccesstoken.jsonData);
+    var data = JSON.parse(body.data.getByAccessToken.jsonData);
     // basic info
     $('.navbar-brand, .name').append(data.fullName);
     $('.category').append(data.profession);
