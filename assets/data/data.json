@@ -5,13 +5,13 @@
     "profession": "Web Developer",
     "tagline": "I can help you achieve your goal as a web developer",
     "profileImageUrl": "assets/images/profile/profile-image.jpg",
-    "about": "I'm an experienced web developer in Asp.net, Angular, WordPress and currently working on Fiverr and Upwork. I've reasonable amount of knowledge in my field. I’ve completed theme integration in Angular, Asp.net, WordPress as well as API Integration in Angular and Asp.net.",
+    "about": "Hi, I am a skilled web developer with close to 3 years of experience in Asp.Net, Angular, and WordPress. I am proficient in working with APIs and debugging. I am also familiar with a variety of development tools and methodologies such as N-Layered Architecture, SOLID Principles, Unit of Work, and Repository Pattern.",
     "basicInfo": {
-        "mobile": "+92-323-1481150",
+        "mobile": "+92-327-4416761",
         "email": "usmangorsi@outlook.com",
         "address": "Lahore District, Punjab, Pakistan",
         "industry": "Information Technologies",
-        "languages": "Urdu, English, Punjabi"
+        "languages": "English, Urdu, Punjabi"
     },
     "socialLinks": [
         {
@@ -25,10 +25,6 @@
         {
             "platformName": "Hubstaff",
             "link": "https://talent.hubstaff.com/profiles/usman-khan-5"
-        },
-        {
-            "platformName": "Fiverr",
-            "link": "https://fiverr.com/usman_gorsi1"
         },
         {
             "platformName": "Upwork",
@@ -78,7 +74,7 @@
             "degree": "Bscs",
             "subject": "Computer Science",
             "summary": "I'm currently doing my bechelors in computer science from virtual university.",
-            "yearOfGraduation": "2018 - Onwards"
+            "yearOfGraduation": "2017 - Onwards"
         }
     ],
     "licensesAndCertifications": [

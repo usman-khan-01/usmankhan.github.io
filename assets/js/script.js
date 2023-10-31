@@ -1,4 +1,4 @@
-var doc = new jsPDF('p', 'pt', 'legal');
+var doc = new jsPDF("p", "pt", "legal");
 var img = new Image();
 var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
@@ -6,40 +6,59 @@ getPlatformName = (s) => console.log(s[0].link);
 
 // data
 (async () => {
-    const response = await fetch('https://api.perspective-v.com/graph/resume', {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "*/*",
-        },
-        body: JSON.stringify({
-            query: `query getMyResume($token:String!){
-                getByAccessToken(accesToken:$token){
-                      name,
-                      htmlTemplate,
-                      jsonData
-                    }
-                  }`,
-            variables: {
-                token: 'FS6Tgrq/T0qblqiuIg7i4Q=='
-            }
-        })
-    });
-    const body = await response.json();
-    var data = JSON.parse(body.data.getByAccessToken.jsonData);
+  //#region cloud call
+  // const response = await fetch('https://api.perspective-v.com/graph/resume', {
+  //     method: 'POST',
+  //     headers: {
+  //         "Content-Type": "application/json",
+  //         "Accept": "*/*",
+  //     },
+  //     body: JSON.stringify({
+  //         query: `query getMyResume($token:String!){
+  //             getByAccessToken(accesToken:$token){
+  //                   name,
+  //                   htmlTemplate,
+  //                   jsonData
+  //                 }
+  //               }`,
+  //         variables: {
+  //             token: 'FS6Tgrq/T0qblqiuIg7i4Q=='
+  //         }
+  //     })
+  // });
+  // const body = await response.json();
+  // var data = JSON.parse(body.data.getByAccessToken.jsonData);
+  //#endregion cloud call
+
+  $.getJSON("./assets/data/data.json", function (data) {
     // basic info
-    $('.navbar-brand, .name').append(data.fullName);
-    $('.category').append(data.profession);
-    document.querySelector('.profile-image').src = data.profileImageUrl;
+    $(".navbar-brand, .name").append(data.fullName);
+    $(".category").append(data.profession);
+    document.querySelector(".profile-image").src = data.profileImageUrl;
     // document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socailLinks);
-    $('.aboutMe').append(data.about);
-    var basicInformation = ["Mobile", "Email", "Address", "Industry", "Languages"];
-    $.each(basicInformation, (i, value) => $('.pInfo .text-uppercase').append(value + ':' + '<br><br>'));
-    $.each(data.basicInfo, (i, value) => $('.pInfoValue').append((value != null && value === `${/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/g}`) ? `<a href="mailto:${value}">${value}</a><br><br>` : value + '<br><br>'));
+    $(".aboutMe").append(data.about);
+    // $(".miniIntro").append();
+    var basicInformation = [
+      "Mobile",
+      "Email",
+      "Address",
+      "Industry",
+      "Languages",
+    ];
+    $.each(basicInformation, (i, value) =>
+      $(".pInfo .text-uppercase").append(value + ":" + "<br><br>")
+    );
+    $.each(data.basicInfo, (i, value) =>
+      $(".pInfoValue").append(
+        value != null && value === `${/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/g}`
+          ? `<a href="mailto:${value}">${value}</a><br><br>`
+          : value + "<br><br>"
+      )
+    );
 
     // skills
     $.each(data.skills, function (i, skill) {
-        $('.skills').append(`
+      $(".skills").append(`
             <div class="col-md-6 skill">
                 <div class="progress-container progress-primary"><span class="progress-badge">${skill.name}</span>
                     <div class="progress">
@@ -54,7 +73,7 @@ getPlatformName = (s) => console.log(s[0].link);
 
     // portfolio
     $.each(data.portfolios, function (i, portfolio) {
-        $('.portfolios').append(`
+      $(".portfolios").append(`
             <div class="tab-content gallery mt-5 col-md-6" style="padding-bottom: 20px">
                 <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <a href="${portfolio.link}" target="_blank">
@@ -72,7 +91,7 @@ getPlatformName = (s) => console.log(s[0].link);
 
     // education
     $.each(data.education, function (i, edu) {
-        $('.cc-education').append(`
+      $(".cc-education").append(`
             <div class="card">
                 <div class="row education">
                     <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -93,12 +112,14 @@ getPlatformName = (s) => console.log(s[0].link);
         `);
     });
 
-    // testimonial
+    //#region testimonials
     $.each(data.testimonials, function (i, testimonial) {
-        $('.carousel-indicators').append(`<li class="carousel-indicator" data-target="#cc-Indicators" dataSlideTo="0"></li>`);
-        if (i == 0) {
-            $('.carousel-indicator').addClass('active');
-            $('.carousel-inner').append(`<div class="carousel-item active">
+      $(".carousel-indicators").append(
+        `<li class="carousel-indicator" data-target="#cc-Indicators" dataSlideTo="0"></li>`
+      );
+      if (i == 0) {
+        $(".carousel-indicator").addClass("active");
+        $(".carousel-inner").append(`<div class="carousel-item active">
                 <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
                         <a href="${testimonial.link}" target="_blank">
@@ -108,9 +129,9 @@ getPlatformName = (s) => console.log(s[0].link);
                     <div class="col-lg-10 col-md-9"> <p>${testimonial.review}</p> </div>
                 </div>
             </div>`);
-        } else {
-            $('.carousel-indicator').removeClass('active');
-            $('.carousel-inner').append(`<div class="carousel-item">
+      } else {
+        $(".carousel-indicator").removeClass("active");
+        $(".carousel-inner").append(`<div class="carousel-item">
                 <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
                         <a href="${testimonial.link}" target="_blank">
@@ -120,41 +141,61 @@ getPlatformName = (s) => console.log(s[0].link);
                     <div class="col-lg-10 col-md-9"> <p>${testimonial.review}</p> </div>
                 </div>
             </div>`);
-        }
+      }
     });
+    //#endregion testimonials
 
     //#region pdf data
-    $('.username_pdf').append(data.fullName);
-    $('.address_pdf').append(data.basicaddress);
-    $('.mailAndMobile_pdf').append(data.basicInfo.email + '<br>' + data.basicInfo.mobile);
-    $('.about_pdf').append(data.about);
+    $(".username_pdf").append(data.fullName);
+    $(".address_pdf").append(data.basicaddress);
+    $(".mailAndMobile_pdf").append(
+      data.basicInfo.email + "<br>" + data.basicInfo.mobile
+    );
+    $(".about_pdf").append(data.about);
     // doc.textWithLink(text, {url: getPlatformName(data.links) });
-    document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socialLinks);
-    $.each(data.skills, (i, skill) => $('.skill_pdf').append(`<li>${skill.name}</li>`));
-    $.each(data.education, (i, edu) => $('.education_pdf').append(`<p>${edu.institution} - ${edu.subject}<br>${edu.yearOfGraduation}</p><br>`));
-    $.each(data.experiences, (i, exp) => $('.experience_pdf').append(`<p><b>${exp.profession} - ${exp.company}</b><br>${exp.duration}<br>${exp.description}</p><br>`));
-    $.each(data.licensesAndCertifications, (i, lcct) => $('.licensesAndCertifications_pdf').append(`<p><a href="${lcct.link}"><b>${lcct.name}</b></a> - ${lcct.institution}</p>`));
+    document.querySelector(".linkedIn_pdf").href = getPlatformName(
+      data.socialLinks
+    );
+    $.each(data.skills, (i, skill) =>
+      $(".skill_pdf").append(`<li>${skill.name}</li>`)
+    );
+    $.each(data.education, (i, edu) =>
+      $(".education_pdf").append(
+        `<p>${edu.institution} - ${edu.subject}<br>${edu.yearOfGraduation}</p><br>`
+      )
+    );
+    $.each(data.experiences, (i, exp) =>
+      $(".experience_pdf").append(
+        `<p><b>${exp.profession} - ${exp.company}</b><br>${exp.duration}<br>${exp.description}</p><br>`
+      )
+    );
+    $.each(data.licensesAndCertifications, (i, lcct) =>
+      $(".licensesAndCertifications_pdf").append(
+        `<p><a href="${lcct.link}"><b>${lcct.name}</b></a> - ${lcct.institution}</p>`
+      )
+    );
     //#endregion pdf data
 
     //#region generate pdf
-    $(document).on('click', '#gpdf', function () {
-        // doc.splitTextToSize(data.about, 50);
-        // doc.textWithLink('linkedin.com/in/uk-gorsi', {url: getPlatformName(data.links)});
-        // html2canvas('#pdf', {
-        //     useCORS: true,
-        //     onrendered: function (canvas) {
-        //     }
-        // })
-        // img.src = data.profileImageUrl;
-        // doc.addImage(img, 'png', 10, 78, 12, 15);
-        doc.fromHTML($("#pdf").html(), 20, 0, {
-            width: 550,
-            pagesplit: true
-        });
-        // window.open(imageData);
-        doc.save(`${data.fullName}'s CV.pdf`);
+    $(document).on("click", "#gpdf", function () {
+      // doc.splitTextToSize(data.about, 50);
+      // doc.textWithLink('linkedin.com/in/uk-gorsi', {url: getPlatformName(data.links)});
+      // html2canvas('#pdf', {
+      //     useCORS: true,
+      //     onrendered: function (canvas) {
+      //     }
+      // })
+      // img.src = data.profileImageUrl;
+      // doc.addImage(img, 'png', 10, 78, 12, 15);
+      doc.fromHTML($("#pdf").html(), 20, 0, {
+        width: 550,
+        pagesplit: true,
+      });
+      // window.open(imageData);
+      doc.save(`${data.fullName}'s CV.pdf`);
     });
     //#endregion generate pdf
+  });
 })();
 
 //#region json to pdf jsPDF
