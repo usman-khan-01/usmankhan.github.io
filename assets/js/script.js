@@ -81,6 +81,7 @@ getPlatformName = (s) => console.log(s[0].link);
                             <figcaption>
                                 <div class="h4">${portfolio.framework}</div>
                                 <p>${portfolio.name}</p>
+                                <p>${portfolio.description}</p>
                             </figcaption>
                         </figure>
                     </a>
