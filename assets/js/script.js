@@ -74,7 +74,7 @@ getPlatformName = (s) => console.log(s[0].link);
     // portfolio
     $.each(data.portfolios, function (i, portfolio) {
       $(".portfolios").append(`
-            <div class="tab-content gallery mt-5 col-md-6" style="padding-bottom: 20px">
+            <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
                 <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <a href="${portfolio.link}" target="_blank">
                         <figure class="cc-effect"><img src="${portfolio.imageUrl}" alt="Image" />

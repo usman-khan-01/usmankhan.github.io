@@ -103,16 +103,37 @@
     ],
     "portfolios": [
         {
+            "name": "Learn Quran Live Academy",
+            "description":"",
+            "imageUrl": "assets/images/portfolios/learn-quran-live-academy/Learn-Quran-Live-1.jpg",
+            "framework": "Asp.Net 6",
+            "link": "https://learnquranliveacademy.com/"
+        },
+        {
+            "name": "Ease My Sales",
+            "description":"",
+            "imageUrl": "assets/images/portfolios/ease-my-sales/Easemysales-1.jpg",
+            "framework": "Angular",
+            "link": ""
+        },
+        {
+            "name": "AM Brisbane Psychology",
+            "description":"",
+            "imageUrl": "assets/images/portfolios/am-brisbane-psychology/AM-Brisbane-Psychology-1.jpg",
+            "framework": "Asp.Net Razor Pages",
+            "link": ""
+        },
+        {
             "name": "Roofers FZC",
             "description":"Roofers FZC is a registered commercial broker who operates as a contracting consultant, reselling commodities, negotiating on behalf of suppliers and exit-buyers, and finalizing commodity purchase and sale contracts. \n\n My Role:\n\nI was responsible for developing Roofers FZC in  WordPress. I used a variety of WordPress plugins and a stunning theme to create Roofers FZC that is both visually appealing and informative. \n\nI worked closely with the client to ensure that the website met their specific needs and requirements. I made sure that the website was easy to navigate and that the content was well-organized and easy to read. I also optimized the website for search engines so that potential customers could easily find it online.\n\nOverall, I am very pleased with the results of this project. The website is a valuable asset to the oil and gas company, and it helps them to reach a wider audience and promote their services.\n\nTools:\nWordPress ",
-            "imageUrl": "assets/images/portfolios/rooferz-fzc-banner.jpg",
+            "imageUrl": "assets/images/portfolios/roofers-fzc/Roofers-4.jpg",
             "framework": "WordPress",
             "link": "https://roofersfzc.net/"
         },
         {
             "name": "Tamino Autograph",
             "description":"Tamino Autographs is a top autograph dealer.Located in New York, USA, and shipping worldwide to our many online customers.\n\nMy Role: \n As a WordPress developer, I was responsible for creating the blog page for the Tamino Autographs website.\n\nThe blog page features a number of key features, including:\n • A list of recent blog posts, with featured images\n • A tags menu that allows visitors to browse blog posts by tags \n • A pagination system that allows visitors to browse through older blog posts.",
-            "imageUrl": "assets/images/portfolios/tamino-autograph.png",
+            "imageUrl": "assets/images/portfolios/tamino-autographs/Tamino Autograph.jpg",
             "framework": "WordPress",
             "link": " https://www.taminoautographs.com/blogs/autograph-blog"
         }
