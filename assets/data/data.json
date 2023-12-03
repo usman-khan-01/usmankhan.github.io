@@ -45,6 +45,10 @@
             "percentage": "80"
         },
         {
+            "name": "Typescript",
+            "percentage": "80"
+        },
+        {
             "name": "WordPress",
             "percentage": "80"
         },
@@ -79,7 +83,23 @@
         {
             "name": "Object Oriented Programming / OOP",
             "percentage": "60"
-        }
+        },
+        {
+            "name": "Blazor",
+            "percentage": "60"
+        },
+        {
+            "name": "GitHub",
+            "percentage": "60"
+        },
+        {
+            "name": "Bitbucket",
+            "percentage": "60"
+        },
+        {
+            "name": "Azure DevOps (CI & CD)",
+            "percentage": "60"
+        },
     ],
     "portfolios": [
         {
