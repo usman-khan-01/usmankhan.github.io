@@ -2,10 +2,10 @@
     "fullName": "Usman Khan",
     "firstName": "Usman",
     "lastName": "Khan",
-    "profession": "Web Developer",
+    "profession": "Full Stack Developer",
     "tagline": "I can help you achieve your goal as a web developer",
     "profileImageUrl": "assets/images/profile/profile-image.jpg",
-    "about": "Hi, I am a skilled web developer with close to 3 years of experience in Asp.Net, Angular, and WordPress. I am proficient in working with APIs and debugging. I am also familiar with a variety of development tools and methodologies such as N-Layered Architecture, SOLID Principles, Unit of Work, and Repository Pattern.",
+    "about": "Hi, my name is Usman Khan and I am a full-stack web developer with close to 3 years of experience in Asp.Net, Angular, and WordPress. I am proficient in working with APIs and debugging. I am also familiar with a variety of development tools and methodologies such as N-Layered Architecture, SOLID Principles, Unit of Work, and Repository Pattern.",
     "basicInfo": {
         "mobile": "+92-327-4416761",
         "email": "usmangorsi@outlook.com",
@@ -29,96 +29,6 @@
         {
             "platformName": "Upwork",
             "link": "https://www.upwork.com/freelancers/~01a12c9161e7456dcc"
-        }
-    ],
-    "experiences": [
-        {
-            "company": "Fiverr Freelancers (Buyer and Seller)",
-            "profession": "Web Developer",
-            "duration": "Mar 2020 - Present",
-            "companyLogo": "images/placeholder-400x400.gif",
-            "description": "I've been working as a freelancer on Fiverr from 2020 and have worked on multiple projects using Asp.Net Core, Asp.Net MVC, Angular, Angular Dart, and WordPress."
-        },
-        {
-            "company": "Upwork",
-            "profession": "Web Developer",
-            "duration": "Feb 2020 - Present",
-            "companyLogo": "images/placeholder-400x400.gif",
-            "description": "Working as a freelance web developer on upwork in Asp.Net Core / MVC, Angular and WordPress."
-        },
-        {
-            "company": "Gorsi Shop",
-            "profession": "Web Developer",
-            "duration": "Mar 2018 - Jan 2020",
-            "companyLogo": "images/placeholder-400x400.gif",
-            "description": "I've worked as a Asp.Net Core and WordPress developer in Gorsi Shop. Gorsi Shop is an online store which sells IT Products. I've worked for in Gorsi Shop from Mar 2018 - Feb 2020 and in that period, I've created an e-commerce website in WordPress as well as Asp.Net Core."
-        }
-    ],
-    "education": [
-        {
-            "institution": "Jinnah Public School",
-            "degree": "High School",
-            "subject": "Metric in Biology",
-            "summary": "I've completed my high school education from jannah Public School located in Gujrat.",
-            "yearOfGraduation": "2014 - 2016"
-        },
-        {
-            "institution": "Superior Group of Colleges",
-            "degree": "Intermediate",
-            "subject": "Computer Science",
-            "summary": "I've completed my intermediate education in the field of computer science in 2018.",
-            "yearOfGraduation": "2016 - 2018"
-        },
-        {
-            "institution": "Virtual University of Pakistan",
-            "degree": "Bscs",
-            "subject": "Computer Science",
-            "summary": "I'm currently doing my bechelors in computer science from virtual university.",
-            "yearOfGraduation": "2017 - Onwards"
-        }
-    ],
-    "licensesAndCertifications": [
-        {
-            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
-            "link": "https://www.linkedin.com/learning/certificates/16c346e9eff4094ab057a9ddf02d8435c031079e74df66aaeeee1fccdf11644e?trk=share_certificate",
-            "institution": "LinkedIn Learning",
-            "name": "Programming Foundations: Fundamentals ",
-            "CompletionDate": "2020"
-        },
-        {
-            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
-            "link": "https://www.linkedin.com/learning/certificates/92f0af3ceefa18248fc07fd75135bddd64752fa06398220143885d43319e6e46?trk=share_certificate",
-            "institution": "Linkedin Learning",
-            "name": "HTML Essential Training",
-            "CompletionDate": "2020"
-        },
-        {
-            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
-            "link": "https://www.linkedin.com/learning/certificates/e1f63ea882ae0c590f14e8be1ecd133f2f9a1b7b39792bbb3bf831acc6ab41f1?trk=share_certificate",
-            "institution": "Linkedin Learning",
-            "name": "Succeeding in Web Development: Full Stack and Front End",
-            "CompletionDate": "2020"
-        },
-        {
-            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
-            "link": "https://www.linkedin.com/learning/certificates/9855cd030e38b7570037046d076c3b67ff95f4480c4746d05cb1f23b6ab783e7?trk=share_certificate",
-            "institution": "Linkedin Learning",
-            "name": "Programming Foundations: Databases",
-            "CompletionDate": "2020"
-        },
-        {
-            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
-            "link": "https://www.linkedin.com/learning/certificates/623c0ca9fa112b8808758daef3dcdd3d10f8fc9a3516bc89dd0411a8fe02d4ff?trk=share_certificate",
-            "institution": "Linkedin Learning",
-            "name": "JavaScript Essential Training (2017)",
-            "CompletionDate": "2020"
-        },
-        {
-            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
-            "link": "https://www.linkedin.com/learning/certificates/cd40eb98ee432b645e76c41738f0f2b0d821c5193541f437feb2d4c1529f4319?trk=share_certificate",
-            "institution": "Linkedin Learning",
-            "name": "CSS Essential Training",
-            "CompletionDate": "2020"
         }
     ],
     "skills": [
@@ -171,6 +81,110 @@
             "percentage": "60"
         }
     ],
+    "portfolios": [
+        {
+            "name": "Roofers FZC",
+            "imageUrl": "assets/images/portfolios/rooferz-fzc-banner.jpg",
+            "framework": "WordPress",
+            "link": "https://roofersfzc.net/"
+        },
+        {
+            "name": "Tamino Autograph",
+            "imageUrl": "assets/images/portfolios/tamino-autograph.png",
+            "framework": "WordPress",
+            "link": " https://www.taminoautographs.com/blogs/autograph-blog"
+        }
+    ],
+    "experiences": [
+        {
+            "company": "Perspective-v",
+            "profession": "Full Stack Developer",
+            "duration": "August 2021 - December 2022",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "I am a seasonal web developer in Asp.Net, and Angular for close to two years. I have experience in building both front-end and back-end web applications using these technologies. During my time at perspective-v, I gained hands-on experience with Ag-Grid, Nx-Workspaces, Angular DataTables, Syncfusion, and more. I have worked on variety of projects, Including: \n\n Learn Quran Live Academy (Asp.Net 6)\nFlat Management System (Angular)\nGorsi Shop (Asp.Net Core 3.1)\nClient Management Website (Angular + Asp.Net)\n\nI am confident that I can use my skills to help you achieve your web development goals."
+        },
+        {
+            "company": "Gorsi Shop",
+            "profession": "Full Stack Developer",
+            "duration": "Mar 2019 - Jan 2020",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "In my time at Gorsi Shop, I have created their E-Commerce website in Wordpress as well as in Asp.Net Core MVC, named Gorsi Shop. Once in Asp.net Core and the second iteration in WordPress. \n Gorsi Shop is an e-commerce website that allows whole sellers to buy any IT related items such as keyboards, mouse, printers, projectors etc. And a complete admin panel is implemented for the admins of the site to manage products, orders and view reviews on different projects. \n Tools: \n\t1st Iteration: \n\t• Front-end: Html, Css, jQuery \n\t• Back-end: Asp.Net Core 2.0, Entity Framework Core \n\n 2nd Iteration: \n\t• WordPress"
+        },
+        {
+            "company": "Freelancing",
+            "profession": "Full Stack Developer",
+            "duration": "March 2020 - Present",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "Working as a freelancer in Asp.net, Angular, Angular Dart, and WordPress. Till now, I have worked on some of the projects listed below: \n\n • My Life You Choose (Asp.Net MVC) \n • AM-Brisbane-Psychology (Asp.Net Razor Pages) \n • Ease My Sales (Angular) \n • Pagric Web Application (Angular) \n • Tipnet (Angular) \n • Tamino Autograph (WordPress) \n • Roofers Free Zone Co (WordPress)"
+        }
+    ],
+    "education": [
+        {
+            "institution": "Jinnah Public School",
+            "degree": "High School",
+            "subject": "Metric in Biology",
+            "summary": "I've completed my high school education from jannah Public School located in Gujrat.",
+            "yearOfGraduation": "2014 - 2016"
+        },
+        {
+            "institution": "Superior Group of Colleges",
+            "degree": "Intermediate",
+            "subject": "Computer Science",
+            "summary": "I've completed my intermediate education in the field of computer science in 2018.",
+            "yearOfGraduation": "2016 - 2018"
+        },
+        {
+            "institution": "Virtual University of Pakistan",
+            "degree": "Bscs",
+            "subject": "Computer Science",
+            "summary": "I'm currently doing my bechelors in computer science from virtual university.",
+            "yearOfGraduation": "2017 - 2024 (Expected)"
+        }
+    ],
+    "licensesAndCertifications": [
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/16c346e9eff4094ab057a9ddf02d8435c031079e74df66aaeeee1fccdf11644e?trk=share_certificate",
+            "institution": "LinkedIn Learning",
+            "name": "Programming Foundations: Fundamentals ",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/92f0af3ceefa18248fc07fd75135bddd64752fa06398220143885d43319e6e46?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "HTML Essential Training",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/e1f63ea882ae0c590f14e8be1ecd133f2f9a1b7b39792bbb3bf831acc6ab41f1?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "Succeeding in Web Development: Full Stack and Front End",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/9855cd030e38b7570037046d076c3b67ff95f4480c4746d05cb1f23b6ab783e7?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "Programming Foundations: Databases",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/623c0ca9fa112b8808758daef3dcdd3d10f8fc9a3516bc89dd0411a8fe02d4ff?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "JavaScript Essential Training (2017)",
+            "CompletionDate": "2020"
+        },
+        {
+            "institutionLogo": "assets/images/logos/linkedin-Learning-40px.png",
+            "link": "https://www.linkedin.com/learning/certificates/cd40eb98ee432b645e76c41738f0f2b0d821c5193541f437feb2d4c1529f4319?trk=share_certificate",
+            "institution": "Linkedin Learning",
+            "name": "CSS Essential Training",
+            "CompletionDate": "2020"
+        }
+    ],
     "testimonials": [
         {
             "name": "Ashpaddon",
@@ -206,20 +220,6 @@
             "imageUrl": "assets/images/profile/m-placeholder-400x400.gif",
             "country": "Peru",
             "review": "Awesome to work with. Great responsiveness and understanding of what was required. He provided me the best solutions and recommendations for my project."
-        }
-    ],
-    "portfolios": [
-        {
-            "name": "Roofers FZC",
-            "imageUrl": "assets/images/portfolios/rooferz-fzc-banner.jpg",
-            "framework": "WordPress",
-            "link": "https://roofersfzc.net/"
-        },
-        {
-            "name": "Tamino Autograph",
-            "imageUrl": "assets/images/portfolios/tamino-autograph.png",
-            "framework": "WordPress",
-            "link": " https://www.taminoautographs.com/blogs/autograph-blog"
         }
     ],
     "services": [
