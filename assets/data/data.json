@@ -140,25 +140,25 @@
     ],
     "experiences": [
         {
+            "company": "Freelancing",
+            "profession": "Full Stack Developer",
+            "duration": "March 2020 - Present",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "Working as a freelancer in Asp.net, Angular, Angular Dart, and WordPress. Till now, I have worked on some of the projects listed below: \n\n • My Life You Choose (Asp.Net MVC) \n • AM-Brisbane-Psychology (Asp.Net Razor Pages) \n • Ease My Sales (Angular) \n • Pagric Web Application (Angular) \n • Tipnet (Angular) \n • Tamino Autograph (WordPress) \n • Roofers Free Zone Co (WordPress)"
+        },
+        {
             "company": "Perspective-v",
             "profession": "Full Stack Developer",
             "duration": "August 2021 - December 2022",
             "companyLogo": "images/placeholder-400x400.gif",
-            "description": "I am a seasonal web developer in Asp.Net, and Angular for close to two years. I have experience in building both front-end and back-end web applications using these technologies. During my time at perspective-v, I gained hands-on experience with Ag-Grid, Nx-Workspaces, Angular DataTables, Syncfusion, and more. I have worked on variety of projects, Including: \n\n Learn Quran Live Academy (Asp.Net 6)\nFlat Management System (Angular)\nGorsi Shop (Asp.Net Core 3.1)\nClient Management Website (Angular + Asp.Net)\n\nI am confident that I can use my skills to help you achieve your web development goals."
+            "description": "I am a seasonal web developer in Asp.Net, and Angular for close to two years. I have experience in building both front-end and back-end web applications using these technologies. During my time at perspective-v, I gained hands-on experience with Ag-Grid, Nx-Workspaces, Angular DataTables, Syncfusion, and more. I have worked on variety of projects, Including: \n\n Learn Quran Live Academy (Asp.Net 6)\nFlat Management System (Angular)\nGorsi Shop (Asp.Net Core 3.1)\nClient Management Website (Angular + Asp.Net)"
         },
         {
             "company": "Gorsi Shop",
             "profession": "Full Stack Developer",
             "duration": "Mar 2019 - Jan 2020",
             "companyLogo": "images/placeholder-400x400.gif",
-            "description": "In my time at Gorsi Shop, I have created their E-Commerce website in Wordpress as well as in Asp.Net Core MVC, named Gorsi Shop. Once in Asp.net Core and the second iteration in WordPress. \n Gorsi Shop is an e-commerce website that allows whole sellers to buy any IT related items such as keyboards, mouse, printers, projectors etc. And a complete admin panel is implemented for the admins of the site to manage products, orders and view reviews on different projects. \n Tools: \n\t1st Iteration: \n\t• Front-end: Html, Css, jQuery \n\t• Back-end: Asp.Net Core 2.0, Entity Framework Core \n\n 2nd Iteration: \n\t• WordPress"
-        },
-        {
-            "company": "Freelancing",
-            "profession": "Full Stack Developer",
-            "duration": "March 2020 - Present",
-            "companyLogo": "images/placeholder-400x400.gif",
-            "description": "Working as a freelancer in Asp.net, Angular, Angular Dart, and WordPress. Till now, I have worked on some of the projects listed below: \n\n • My Life You Choose (Asp.Net MVC) \n • AM-Brisbane-Psychology (Asp.Net Razor Pages) \n • Ease My Sales (Angular) \n • Pagric Web Application (Angular) \n • Tipnet (Angular) \n • Tamino Autograph (WordPress) \n • Roofers Free Zone Co (WordPress)"
+            "description": "In my time at Gorsi Shop, I have created their E-Commerce website in Wordpress as well as in Asp.Net Core MVC, named Gorsi Shop. Once in Asp.net Core and the second iteration in WordPress. \n Gorsi Shop is an e-commerce website that allows whole sellers to buy any IT related items such as keyboards, mouse, printers, projectors etc. And a complete admin panel is implemented for the admins of the site to manage products, orders and view reviews on different projects. \n\n Tools: \n1st Iteration: \n• Front-end: Html, Css, jQuery \n\t• Back-end: Asp.Net Core 2.0, Entity Framework Core \n\n 2nd Iteration: \n\t• WordPress"
         }
     ],
     "education": [

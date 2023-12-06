@@ -90,28 +90,52 @@ getPlatformName = (s) => console.log(s[0].link);
         `);
     });
 
-    // education
-    $.each(data.education, function (i, edu) {
+    //#region experiences
+    $.each(data.experiences, function (i, exp) {
       $(".cc-education").append(`
-            <div class="card">
-                <div class="row education">
-                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                        <div class="card-body cc-education-header">
-                            <p>${edu.yearOfGraduation}</p>
-                            <div class="h5">${edu.degree}</div>
+                <div class="card">
+                    <div class="row education">
+                        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                            <div class="card-body cc-education-header">
+                                <p>${exp.duration}</p>
+                                <div class="h5">${exp.profession}</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                        <div class="card-body">
-                            <div class="h5">${edu.subject}</div>
-                            <p class="category">${edu.institution}</p>
-                            <p>${edu.summary}</p>
+                        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                            <div class="card-body">
+                                <div class="h5">${exp.company}</div>
+                                <p class="category"></p>
+                                <p>${exp.description.replace(/\n/g, '<br>')}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        `);
+            `);
     });
+    //#endregion experiences
+
+    // education
+    // $.each(data.education, function (i, edu) {
+    //   $(".cc-education").append(`
+    //         <div class="card">
+    //             <div class="row education">
+    //                 <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+    //                     <div class="card-body cc-education-header">
+    //                         <p>${edu.yearOfGraduation}</p>
+    //                         <div class="h5">${edu.degree}</div>
+    //                     </div>
+    //                 </div>
+    //                 <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+    //                     <div class="card-body">
+    //                         <div class="h5">${edu.subject}</div>
+    //                         <p class="category">${edu.institution}</p>
+    //                         <p>${edu.summary}</p>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     `);
+    // });
 
     //#region testimonials
     $.each(data.testimonials, function (i, testimonial) {
