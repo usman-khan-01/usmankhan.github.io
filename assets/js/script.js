@@ -105,7 +105,7 @@ getPlatformName = (s) => console.log(s[0].link);
                             <div class="card-body">
                                 <div class="h5">${exp.company}</div>
                                 <p class="category"></p>
-                                <p>${exp.description.replace(/\n/g, '<br>')}</p>
+                                <p>${exp.description.replace(/\n/g, "<br>")}</p>
                             </div>
                         </div>
                     </div>
@@ -182,18 +182,18 @@ getPlatformName = (s) => console.log(s[0].link);
       data.socialLinks
     );
     $.each(data.skills, (i, skill) =>
-      $(".skill_pdf").append(`<li>${skill.name}</li>`)
+      $(".skill_pdf").append(`&#x2022; ${skill.name}, `)
     );
     $.each(data.education, (i, edu) =>
       $(".education_pdf").append(
         `<p>${edu.institution} - ${edu.subject}<br>${edu.yearOfGraduation}</p><br>`
       )
     );
-    $.each(data.experiences, (i, exp) =>
+    $.each(data.experiences, (i, exp) => {
       $(".experience_pdf").append(
         `<p><b>${exp.profession} - ${exp.company}</b><br>${exp.duration}<br>${exp.description}</p><br>`
-      )
-    );
+      );
+    });
     $.each(data.licensesAndCertifications, (i, lcct) =>
       $(".licensesAndCertifications_pdf").append(
         `<p><a href="${lcct.link}"><b>${lcct.name}</b></a> - ${lcct.institution}</p>`

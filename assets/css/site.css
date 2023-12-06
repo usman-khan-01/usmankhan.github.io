@@ -5,12 +5,14 @@
     margin-bottom: 20px;
     color: #fff;
 }
+
 .experiences .experience-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
     border-left: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
 }
+
 .experiences .experience-item h4 {
     line-height: 18px;
     font-size: 18px;
@@ -20,6 +22,7 @@
     color: #18d26e;
     margin-bottom: 10px;
 }
+
 .experiences .experience-item h5 {
     font-size: 16px;
     background: rgba(255, 255, 255, 0.15);
@@ -28,15 +31,19 @@
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 .experiences .experience-item ul {
     padding-left: 20px;
 }
+
 .experiences .experience-item ul li {
     padding-bottom: 10px;
 }
+
 .experiences .experience-item:last-child {
     padding-bottom: 0;
 }
+
 .experiences .experience-item::before {
     content: "";
     position: absolute;
@@ -49,7 +56,7 @@
     border: 2px solid #18d26e;
 }
 
-.tabSpace{
+.tabSpace {
     margin-left: 20px;
 }
 
@@ -62,6 +69,7 @@
     /* position: sticky; */
     z-index: 1;
 }
+
 .button {
     background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
     background-image: linear-gradient(top, #f4f1ee, #fff);
@@ -88,11 +96,13 @@
     position: absolute;
     width: 30px;
 }
+
 .tick:after {
     content: "✔";
     left: 23px;
     top: 20px;
 }
+
 .button:hover {
     background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
     background-image: linear-gradient(top, #fff, #f4f1ee);
@@ -114,8 +124,18 @@
     color: #dbd2d2;
     text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
 }
+
 /*#endregion download button */
 
-.cc-education{
+.cc-education {
     margin-top: -50px;
+}
+
+ul {
+    overflow: hidden;
+}
+
+ul li {
+    width: 50%;
+    float: left;
 }

@@ -104,35 +104,35 @@
     "portfolios": [
         {
             "name": "Learn Quran Live Academy",
-            "description":"",
+            "description": "",
             "imageUrl": "assets/images/portfolios/learn-quran-live-academy/Learn-Quran-Live-1.jpg",
             "framework": "Asp.Net 6",
             "link": "https://learnquranliveacademy.com/"
         },
         {
             "name": "Ease My Sales",
-            "description":"",
+            "description": "",
             "imageUrl": "assets/images/portfolios/ease-my-sales/Easemysales-1.jpg",
             "framework": "Angular",
             "link": ""
         },
         {
             "name": "AM Brisbane Psychology",
-            "description":"",
+            "description": "",
             "imageUrl": "assets/images/portfolios/am-brisbane-psychology/AM-Brisbane-Psychology-1.jpg",
             "framework": "Asp.Net Razor Pages",
             "link": ""
         },
         {
             "name": "Roofers FZC",
-            "description":"",
+            "description": "",
             "imageUrl": "assets/images/portfolios/roofers-fzc/Roofers-4.jpg",
             "framework": "WordPress",
             "link": "https://roofersfzc.net/"
         },
         {
             "name": "Tamino Autograph",
-            "description":"",
+            "description": "",
             "imageUrl": "assets/images/portfolios/tamino-autographs/Tamino Autograph.jpg",
             "framework": "WordPress",
             "link": " https://www.taminoautographs.com/blogs/autograph-blog"
@@ -151,14 +151,14 @@
             "profession": "Full Stack Developer",
             "duration": "August 2021 - December 2022",
             "companyLogo": "images/placeholder-400x400.gif",
-            "description": "I am a seasonal web developer in Asp.Net, and Angular for close to two years. I have experience in building both front-end and back-end web applications using these technologies. During my time at perspective-v, I gained hands-on experience with Ag-Grid, Nx-Workspaces, Angular DataTables, Syncfusion, and more. I have worked on variety of projects, Including: \n\n Learn Quran Live Academy (Asp.Net 6)\nFlat Management System (Angular)\nGorsi Shop (Asp.Net Core 3.1)\nClient Management Website (Angular + Asp.Net)"
+            "description": "I am a seasonal web developer in Asp.Net, and Angular for close to two years. I have experience in building both front-end and back-end web applications using these technologies. During my time at perspective-v, I gained hands-on experience with Ag-Grid, Nx-Workspaces, Angular DataTables, Syncfusion, and more. I have worked on variety of projects, Including: \n\n • Learn Quran Live Academy (Asp.Net 6)\n • Flat Management System (Angular)\n • Gorsi Shop (Asp.Net Core 3.1)\n • Client Management Website (Angular + Asp.Net)"
         },
         {
             "company": "Gorsi Shop",
             "profession": "Full Stack Developer",
             "duration": "Mar 2019 - Jan 2020",
             "companyLogo": "images/placeholder-400x400.gif",
-            "description": "In my time at Gorsi Shop, I have created their E-Commerce website in Wordpress as well as in Asp.Net Core MVC, named Gorsi Shop. Once in Asp.net Core and the second iteration in WordPress. \n Gorsi Shop is an e-commerce website that allows whole sellers to buy any IT related items such as keyboards, mouse, printers, projectors etc. And a complete admin panel is implemented for the admins of the site to manage products, orders and view reviews on different projects. \n\n Tools: \n1st Iteration: \n• Front-end: Html, Css, jQuery \n\t• Back-end: Asp.Net Core 2.0, Entity Framework Core \n\n 2nd Iteration: \n\t• WordPress"
+            "description": "In my time at Gorsi Shop, I have created their E-Commerce website in Wordpress as well as in Asp.Net Core MVC, named Gorsi Shop. Once in Asp.net Core and the second iteration in WordPress. \n Gorsi Shop is an e-commerce website that allows whole sellers to buy any IT related items such as keyboards, mouse, printers, projectors etc. And a complete admin panel is implemented for the admins of the site to manage products, orders and view reviews on different projects. \n\n Tools: \n1st Iteration: \n• Front-end: Html, Css, jQuery \n• Back-end: Asp.Net Core 2.0, Entity Framework Core \n\n 2nd Iteration: \n• WordPress"
         }
     ],
     "education": [
