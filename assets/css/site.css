@@ -60,6 +60,10 @@
     margin-left: 20px;
 }
 
+.cc-education {
+    margin-top: -50px;
+}
+
 /*#region download button */
 .buttonHolder {
     bottom: 1%;
@@ -126,16 +130,3 @@
 }
 
 /*#endregion download button */
-
-.cc-education {
-    margin-top: -50px;
-}
-
-ul {
-    overflow: hidden;
-}
-
-ul li {
-    width: 50%;
-    float: left;
-}

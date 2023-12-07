@@ -6,8 +6,10 @@ getPlatformName = (s) => console.log(s[0].link);
 // const EMAIL_PATTERNS = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
 // data
+
 (async () => {
-  //#region cloud call
+
+  //#region cloud data
   // const response = await fetch('https://api.perspective-v.com/graph/resume', {
   //     method: 'POST',
   //     headers: {
@@ -29,8 +31,9 @@ getPlatformName = (s) => console.log(s[0].link);
   // });
   // const body = await response.json();
   // var data = JSON.parse(body.data.getByAccessToken.jsonData);
-  //#endregion cloud call
+  //#endregion cloud data
 
+  //#region local data
   $.getJSON("./assets/data/data.json", function (data) {
     //#region basic info
     $(".navbar-brand, .name").append(data.fullName);
@@ -119,27 +122,27 @@ getPlatformName = (s) => console.log(s[0].link);
     //#endregion experiences
 
     //#region education
-    // $.each(data.education, function (i, edu) {
-    //   $(".cc-education").append(`
-    //         <div class="card">
-    //             <div class="row education">
-    //                 <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-    //                     <div class="card-body cc-education-header">
-    //                         <p>${edu.yearOfGraduation}</p>
-    //                         <div class="h5">${edu.degree}</div>
-    //                     </div>
-    //                 </div>
-    //                 <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-    //                     <div class="card-body">
-    //                         <div class="h5">${edu.subject}</div>
-    //                         <p class="category">${edu.institution}</p>
-    //                         <p>${edu.summary}</p>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     `);
-    // });
+    $.each(data.education, function (i, edu) {
+      $(".cc-educations").append(`
+            <div class="card">
+                <div class="row education">
+                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                        <div class="card-body cc-education-header">
+                            <p>${edu.yearOfGraduation}</p>
+                            <div class="h5">${edu.degree}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                        <div class="card-body">
+                            <div class="h5">${edu.subject}</div>
+                            <p class="category">${edu.institution}</p>
+                            <p>${edu.summary}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+    });
     //#endregion education
 
     //#region testimonials
@@ -217,4 +220,6 @@ getPlatformName = (s) => console.log(s[0].link);
     });
     //#endregion generate pdf
   });
+  //#endregion local data
+
 })();
