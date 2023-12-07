@@ -1,8 +1,9 @@
-var doc = new jsPDF("p", "pt", "legal");
-var img = new Image();
-var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+const DOC = new jsPDF("p", "pt", "A4");
 
 getPlatformName = (s) => console.log(s[0].link);
+
+// const IMG = new Image();
+// const EMAIL_PATTERNS = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
 // data
 (async () => {
@@ -31,7 +32,7 @@ getPlatformName = (s) => console.log(s[0].link);
   //#endregion cloud call
 
   $.getJSON("./assets/data/data.json", function (data) {
-    // basic info
+    //#region basic info
     $(".navbar-brand, .name").append(data.fullName);
     $(".category").append(data.profession);
     document.querySelector(".profile-image").src = data.profileImageUrl;
@@ -55,8 +56,9 @@ getPlatformName = (s) => console.log(s[0].link);
           : value + "<br><br>"
       )
     );
+    //#endregion basic info
 
-    // skills
+    //#region skills
     $.each(data.skills, function (i, skill) {
       $(".skills").append(`
             <div class="col-md-6 skill">
@@ -70,8 +72,9 @@ getPlatformName = (s) => console.log(s[0].link);
             </div>
         `);
     });
+    //#endregion skills
 
-    // portfolio
+    //#region portfolio
     $.each(data.portfolios, function (i, portfolio) {
       $(".portfolios").append(`
             <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
@@ -89,6 +92,7 @@ getPlatformName = (s) => console.log(s[0].link);
             </div>
         `);
     });
+    //#endregion portfolio
 
     //#region experiences
     $.each(data.experiences, function (i, exp) {
@@ -114,7 +118,7 @@ getPlatformName = (s) => console.log(s[0].link);
     });
     //#endregion experiences
 
-    // education
+    //#region education
     // $.each(data.education, function (i, edu) {
     //   $(".cc-education").append(`
     //         <div class="card">
@@ -136,6 +140,7 @@ getPlatformName = (s) => console.log(s[0].link);
     //         </div>
     //     `);
     // });
+    //#endregion education
 
     //#region testimonials
     $.each(data.testimonials, function (i, testimonial) {
@@ -172,17 +177,18 @@ getPlatformName = (s) => console.log(s[0].link);
 
     //#region pdf data
     $(".username_pdf").append(data.fullName);
-    $(".address_pdf").append(data.basicaddress);
+    $(".profession_pdf").append(data.profession);
+    $(".address_pdf").append(data.basicInfo.address);
     $(".mailAndMobile_pdf").append(
-      data.basicInfo.email + "<br>" + data.basicInfo.mobile
+      data.basicInfo.mobile + " - " + data.basicInfo.email
     );
     $(".about_pdf").append(data.about);
     // doc.textWithLink(text, {url: getPlatformName(data.links) });
-    document.querySelector(".linkedIn_pdf").href = getPlatformName(
-      data.socialLinks
-    );
+    // document.querySelector(".linkedIn_pdf").href = getPlatformName(
+    //   data.socialLinks
+    // );
     $.each(data.skills, (i, skill) =>
-      $(".skill_pdf").append(`&#x2022; ${skill.name}, `)
+      $(".skill_pdf").append(`${skill.name}, `)
     );
     $.each(data.education, (i, edu) =>
       $(".education_pdf").append(
@@ -203,36 +209,12 @@ getPlatformName = (s) => console.log(s[0].link);
 
     //#region generate pdf
     $(document).on("click", "#gpdf", function () {
-      // doc.splitTextToSize(data.about, 50);
-      // doc.textWithLink('linkedin.com/in/uk-gorsi', {url: getPlatformName(data.links)});
-      // html2canvas('#pdf', {
-      //     useCORS: true,
-      //     onrendered: function (canvas) {
-      //     }
-      // })
-      // img.src = data.profileImageUrl;
-      // doc.addImage(img, 'png', 10, 78, 12, 15);
-      doc.fromHTML($("#pdf").html(), 20, 0, {
+      DOC.fromHTML($("#pdf").html(), 20, 0, {
         width: 550,
         pagesplit: true,
       });
-      // window.open(imageData);
-      doc.save(`${data.fullName}'s CV.pdf`);
+      DOC.save(`${data.fullName}'s Resume.pdf`);
     });
     //#endregion generate pdf
   });
 })();
-
-//#region json to pdf jsPDF
-// var doc = new jsPDF();
-// $(document).on('click', '#gpdf', function (event) {
-//     doc.text(10, 10,
-//         `${data.info.fullName}` + '\n' + `${data.basicInfo.address}` + '\n\n' +
-//         `${data.basicInfo.email}` + '\t\t\t' + `${data.info.mobileNumber}` + '\n\n\n' +
-//         `${getPlatformName(data.links)}` + '\n\n' + `Summary` + '\n' + `${data.info.about}` + '\n\n' +
-//         ``
-//     )
-//     // 📧
-//     doc.save(`${data.info.fullName}'s CV.pdf`);
-// });
-//#endregion json to pdf jsPDF

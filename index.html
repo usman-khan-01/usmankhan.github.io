@@ -25,7 +25,7 @@
 
   <body id="top">
 
-    <!-- header -->
+    <!--#region header -->
     <header>
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -49,11 +49,12 @@
         </nav>
       </div>
     </header>
+    <!--#endregion header -->
 
-    <!-- page-content -->
+    <!--#region page-content -->
     <div class="page-content">
-
-      <!-- banner -->
+      
+      <!--#region banner -->
       <div class="profile-page">
         <div class="wrapper">
           <div class="page-header page-header-small" filter-color="green">
@@ -85,8 +86,9 @@
           </div>
         </div>
       </div>
+      <!--#endregion banner -->
 
-      <!-- about -->
+      <!--#region about -->
       <div class="section" id="about">
         <div class="container">
           <div class="card" data-aos="fade-up" data-aos-offset="10">
@@ -115,8 +117,9 @@
           </div>
         </div>
       </div>
+      <!--#endregion about -->
 
-      <!-- skills -->
+      <!--#region skills -->
       <div class="section" id="skill">
         <div class="container">
           <div class="h4 text-center mb-4 title">Professional Skills</div>
@@ -128,8 +131,9 @@
           </div>
         </div>
       </div>
+      <!--#endregion skills -->
 
-      <!-- portfolios -->
+      <!--#region portfolios -->
       <div class="section" id="portfolio">
         <div class="container">
           <div class="row">
@@ -144,6 +148,7 @@
           </div>
         </div>
       </div>
+      <!--#endregion portfolios -->
 
       <!--#region experiences -->
       <!-- <div class="container experiences">
@@ -190,13 +195,16 @@
             </div>
           </div>
         </div>
-      </div>
-    </div> -->
-    <!--#endregion testimonials -->
+      </div> -->
+      <!--#endregion testimonials -->
+    
+    </div> 
+    <!--#endregion page-content -->
 
     <!--#region download as pdf button -->
     <div class="buttonHolder">
-      <a title="Download PDF" href="" id="gpdf" class="button tick"></a>
+      <a title="Download PDF" href="assets/Resume/Usman Khan.pdf" download="Usman Khan.pdf" id="gpdf" class="button tick"></a>
+      <!-- <a title="Download PDF" href="" id="gpdf" class="button tick"></a> -->
     </div>
     <!--#endregion download as pdf button -->
 
@@ -226,10 +234,13 @@
           <h2 class="username_pdf"></h2>
         </div>
         <div class="col-12">
-          <p class="address_pdf"></p>
+          <strong class="address_pdf"></strong>
         </div>
-        <div class="col-6">
-          <p class="mailAndMobile_pdf"></p>
+        <div class="col-12">
+          <strong class="profession_pdf"></strong>
+        </div>
+        <div class="col-12">
+          <strong class="mailAndMobile_pdf"></strong>
         </div>
         <div class="col-12">
           <a class="linkedIn_pdf"></a>
@@ -267,6 +278,7 @@
     <script src="assets/js/aos.js?ver=1.1.0"></script>
     <script src="assets/js/main.js?ver=1.1.0"></script>
     <!--#endregion Scripts -->
+
   </body>
 
 </html>
