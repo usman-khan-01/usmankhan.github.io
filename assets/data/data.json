@@ -163,11 +163,11 @@
     ],
     "education": [
         {
-            "institution": "Jinnah Public School",
-            "degree": "High School",
-            "subject": "Metric in Biology",
-            "summary": "I've completed my high school education from jannah Public School located in Gujrat.",
-            "yearOfGraduation": "2014 - 2016"
+            "institution": "Virtual University of Pakistan",
+            "degree": "Bscs",
+            "subject": "Computer Science",
+            "summary": "I'm currently doing my bechelors in computer science from virtual university.",
+            "yearOfGraduation": "2017 - 2024 (Expected)"
         },
         {
             "institution": "Superior Group of Colleges",
@@ -177,11 +177,11 @@
             "yearOfGraduation": "2016 - 2018"
         },
         {
-            "institution": "Virtual University of Pakistan",
-            "degree": "Bscs",
-            "subject": "Computer Science",
-            "summary": "I'm currently doing my bechelors in computer science from virtual university.",
-            "yearOfGraduation": "2017 - 2024 (Expected)"
+            "institution": "Jinnah Public School",
+            "degree": "High School",
+            "subject": "Metric in Biology",
+            "summary": "I've completed my high school education from jannah Public School located in Gujrat.",
+            "yearOfGraduation": "2014 - 2016"
         }
     ],
     "licensesAndCertifications": [

@@ -8,7 +8,6 @@ getPlatformName = (s) => console.log(s[0].link);
 // data
 
 (async () => {
-
   //#region cloud data
   // const response = await fetch('https://api.perspective-v.com/graph/resume', {
   //     method: 'POST',
@@ -64,7 +63,7 @@ getPlatformName = (s) => console.log(s[0].link);
     //#region skills
     $.each(data.skills, function (i, skill) {
       $(".skills").append(`
-            <div class="col-md-6 skill">
+            <div class="col-md-4 skill">
                 <div class="progress-container progress-primary"><span class="progress-badge">${skill.name}</span>
                     <div class="progress">
                         <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
@@ -99,7 +98,7 @@ getPlatformName = (s) => console.log(s[0].link);
 
     //#region experiences
     $.each(data.experiences, function (i, exp) {
-      $(".cc-education").append(`
+      $(".experiences-list").append(`
                 <div class="card">
                     <div class="row education">
                         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -123,7 +122,7 @@ getPlatformName = (s) => console.log(s[0].link);
 
     //#region education
     $.each(data.education, function (i, edu) {
-      $(".cc-educations").append(`
+      $(".education-list").append(`
             <div class="card">
                 <div class="row education">
                     <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -221,5 +220,4 @@ getPlatformName = (s) => console.log(s[0].link);
     //#endregion generate pdf
   });
   //#endregion local data
-
 })();
