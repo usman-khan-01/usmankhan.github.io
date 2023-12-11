@@ -154,7 +154,7 @@ getPlatformName = (s) => console.log(s[0].link);
         $(".carousel-inner").append(`<div class="carousel-item active">
                 <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
-                        <a href="${testimonial.link}" target="_blank">
+                        <a target="_blank">
                             <img src="${testimonial.imageUrl}" alt="${testimonial.name}'s Image" />
                         </a>
                         <div class="h5 pt-2">${testimonial.name}</div> <p class="category">${testimonial.country}</p> </div>
@@ -166,7 +166,7 @@ getPlatformName = (s) => console.log(s[0].link);
         $(".carousel-inner").append(`<div class="carousel-item">
                 <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
-                        <a href="${testimonial.link}" target="_blank">
+                        <a target="_blank">
                             <img src="${testimonial.imageUrl}" alt="${testimonial.name}'s Image" />
                         </a>
                         <div class="h5 pt-2">${testimonial.name}</div> <p class="category">${testimonial.country}</p> </div>
