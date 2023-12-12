@@ -101,8 +101,31 @@
             "percentage": "60"
         }
     ],
+    "portfolioHeadings": [
+        {
+            "name": "All",
+            "link": "all",
+            "active": "active"
+        },
+        {
+            "name": "Asp.Net",
+            "link": "aspnet",
+            "active": ""
+        },
+        {
+            "name": "Angular",
+            "link": "angular",
+            "active": ""
+        },
+        {
+            "name": "WordPress",
+            "link": "wordpress",
+            "active": ""
+        }
+    ],
     "portfolios": [
         {
+            "htmlId": "aspnet",
             "name": "Learn Quran Live Academy",
             "description": "",
             "imageUrl": "assets/images/portfolios/learn-quran-live-academy/Learn-Quran-Live-1.jpg",
@@ -110,13 +133,7 @@
             "link": "https://learnquranliveacademy.com/"
         },
         {
-            "name": "Ease My Sales",
-            "description": "",
-            "imageUrl": "assets/images/portfolios/ease-my-sales/Easemysales-1.jpg",
-            "framework": "Angular",
-            "link": ""
-        },
-        {
+            "htmlId": "aspnet",
             "name": "AM Brisbane Psychology",
             "description": "",
             "imageUrl": "assets/images/portfolios/am-brisbane-psychology/AM-Brisbane-Psychology-1.jpg",
@@ -124,6 +141,15 @@
             "link": ""
         },
         {
+            "htmlId": "angular",
+            "name": "Ease My Sales",
+            "description": "",
+            "imageUrl": "assets/images/portfolios/ease-my-sales/Easemysales-1.jpg",
+            "framework": "Angular",
+            "link": ""
+        },
+        {
+            "htmlId": "wordpress",
             "name": "Roofers FZC",
             "description": "",
             "imageUrl": "assets/images/portfolios/roofers-fzc/Roofers-4.jpg",
@@ -131,6 +157,7 @@
             "link": "https://roofersfzc.net/"
         },
         {
+            "htmlId": "wordpress",
             "name": "Tamino Autograph",
             "description": "",
             "imageUrl": "assets/images/portfolios/tamino-autographs/Tamino Autograph.jpg",
