@@ -125,7 +125,7 @@
     ],
     "portfolios": [
         {
-            "htmlId": "aspnet",
+            "hId": "aspnet",
             "name": "Learn Quran Live Academy",
             "description": "",
             "imageUrl": "assets/images/portfolios/learn-quran-live-academy/Learn-Quran-Live-1.jpg",
@@ -133,7 +133,7 @@
             "link": "https://learnquranliveacademy.com/"
         },
         {
-            "htmlId": "aspnet",
+            "hId": "aspnet",
             "name": "AM Brisbane Psychology",
             "description": "",
             "imageUrl": "assets/images/portfolios/am-brisbane-psychology/AM-Brisbane-Psychology-1.jpg",
@@ -141,7 +141,7 @@
             "link": ""
         },
         {
-            "htmlId": "angular",
+            "hId": "angular",
             "name": "Ease My Sales",
             "description": "",
             "imageUrl": "assets/images/portfolios/ease-my-sales/Easemysales-1.jpg",
@@ -149,7 +149,7 @@
             "link": ""
         },
         {
-            "htmlId": "wordpress",
+            "hId": "wordpress",
             "name": "Roofers FZC",
             "description": "",
             "imageUrl": "assets/images/portfolios/roofers-fzc/Roofers-4.jpg",
@@ -157,7 +157,7 @@
             "link": "https://roofersfzc.net/"
         },
         {
-            "htmlId": "wordpress",
+            "hId": "wordpress",
             "name": "Tamino Autograph",
             "description": "",
             "imageUrl": "assets/images/portfolios/tamino-autographs/Tamino Autograph.jpg",

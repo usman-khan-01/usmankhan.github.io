@@ -1,6 +1,10 @@
 // const IMG = new Image();
 // const EMAIL_PATTERNS = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 const DOC = new jsPDF("p", "pt", "A4");
+const ALL = "all";
+const ASP = "aspnet";
+const ANG = "angular";
+const WORD = "wordpress";
 
 getPlatformName = (s) => console.log(s[0].link);
 
@@ -75,7 +79,6 @@ getPlatformName = (s) => console.log(s[0].link);
     //#endregion skills
 
     //#region portfolio
-
     $.each(data.portfolioHeadings, function (i, ph) {
       $(".portfolio-heading").append(`
         <li class="nav-item ${ph.link}"><a class="nav-link ${ph.active}" data-toggle="tab" href="#${ph.link}" role="tablist">${ph.name}</a></li>
@@ -83,9 +86,29 @@ getPlatformName = (s) => console.log(s[0].link);
     });
 
     $.each(data.portfolios, function (i, p) {
-      portfolios(p);
-    });
+      Portfolios(p);
 
+      var modal = document.getElementById("portfolioModal");
+      var img = document.getElementById(`${p.hId}`);
+      var modalImg = document.getElementById("portfolioImg");
+      // var captionText = document.getElementById("caption");
+
+      // display modal
+      $(img).click(function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        // captionText.innerHTML = this.alt;
+      });
+      // close the modal
+      $(modal).click(function () {
+        portfolioImg.className += "out";
+        setTimeout(function () {
+          modal.style.display = "none";
+          portfolioImg.className = "modal-content";
+        }, 200);
+      });
+    });
     //#endregion portfolio
 
     //#region experiences
@@ -215,59 +238,37 @@ getPlatformName = (s) => console.log(s[0].link);
 })();
 
 //#region functions
-function portfolios(p) {
+
+function Show(id) {
+  $(`#${id}`).show();
+}
+
+function Hide(id) {
+  $(`#${id}`).hide();
+}
+
+function ShowOrHidePortfoliosBasedOnCondition(id) {
+  $(`.${ALL}`).click(() => Show(id));
+  $(`.${ASP}`).click(() => (id == ASP ? Show(id) : Hide(id)));
+  $(`.${ANG}`).click(() => (id == ANG ? Show(id) : Hide(id)));
+  $(`.${WORD}`).click(() => (id == WORD ? Show(id) : Hide(id)));
+}
+
+function Portfolios(p) {
   $(`.portfolios`).append(`
-    <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
-        <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <!-- <a target="_blank"> -->
-                <figure class="cc-effect"><img src="${p.imageUrl}" alt="${p.name}" />
-                    <figcaption>
-                        <div class="h4">${p.framework}</div>
-                        <p>${p.name}</p>
-                        <p>${p.description}</p>
-                    </figcaption>
-                </figure>
-            <!-- </a> -->
-        </div>
-    </div>
-  `);
-  $(`#${p.htmlId}`).hide();
-  $().ready(function () {
-    $(`.all`).click(function () {
-      $(`.portfolios`).show();
-      $(`#${p.htmlId}`).hide();
-    });
-    $(`.aspnet`).click(function () {
-      $(`.portfolios`).hide();
-      $(`#aspnet`).show();
-      $(`#angular`).hide();
-      $(`#wordpress`).hide();
-    });
-    $(`.angular`).click(function () {
-      $(`.portfolios`).hide();
-      $(`#aspnet`).hide();
-      $(`#angular`).show();
-      $(`#wordpress`).hide();
-    });
-    $(`.wordpress`).click(function () {
-      $(`.portfolios`).hide();
-      $(`#aspnet`).hide();
-      $(`#angular`).hide();
-      $(`#wordpress`).show();
-    });
-  });
-  $(`#${p.htmlId}`).append(`
-    <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
+    <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px" id="${p.hId}">
       <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        <figure class="cc-effect"><img src="${p.imageUrl}" alt="${p.name}" />
-          <figcaption>
-            <div class="h4">${p.framework}</div>
-            <p>${p.name}</p>
-            <p>${p.description}</p>
-          </figcaption>
+        <figure class="cc-effect">
+          <img src="${p.imageUrl}" id="${p.hId}-img" alt="${p.name}" />
+            <figcaption>
+              <div class="h4">${p.framework}</div>
+              <p>${p.name}</p>
+              <p>${p.description}</p>
+            </figcaption>
         </figure>
       </div>
     </div>
   `);
+  ShowOrHidePortfoliosBasedOnCondition(p.hId);
 }
 //#endregion functions
