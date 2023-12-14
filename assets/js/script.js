@@ -35,7 +35,7 @@ getPlatformName = (s) => console.log(s[0].link);
   //#endregion cloud data
 
   //#region local data
-  $.getJSON("./assets/data/data.json", function (data) {
+  $.getJSON("./assets/data/data.json", (data) => {
     //#region basic info
     $(".navbar-brand, .name").append(data.fullName);
     $(".category").append(data.profession);
@@ -50,20 +50,20 @@ getPlatformName = (s) => console.log(s[0].link);
       "Industry",
       "Languages",
     ];
-    $.each(basicInformation, (i, value) =>
-      $(".pInfo .text-uppercase").append(value + ":" + "<br><br>")
-    );
-    $.each(data.basicInfo, (i, value) =>
+    $.each(basicInformation, (i, value) => {
+      $(".pInfo .text-uppercase").append(value + ":" + "<br><br>");
+    });
+    $.each(data.basicInfo, (i, value) => {
       $(".pInfoValue").append(
         value != null && value === `${/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/g}`
           ? `<a href="mailto:${value}">${value}</a><br><br>`
           : value + "<br><br>"
-      )
-    );
+      );
+    });
     //#endregion basic info
 
     //#region skills
-    $.each(data.skills, function (i, skill) {
+    $.each(data.skills, (i, skill) => {
       $(".skills").append(`
             <div class="col-md-4 skill">
                 <div class="progress-container progress-primary"><span class="progress-badge">${skill.name}</span>
@@ -79,40 +79,48 @@ getPlatformName = (s) => console.log(s[0].link);
     //#endregion skills
 
     //#region portfolio
-    $.each(data.portfolioHeadings, function (i, ph) {
+    $.each(data.portfolioHeadings, (i, ph) => {
       $(".portfolio-heading").append(`
         <li class="nav-item ${ph.link}"><a class="nav-link ${ph.active}" data-toggle="tab" href="#${ph.link}" role="tablist">${ph.name}</a></li>
       `);
     });
 
-    $.each(data.portfolios, function (i, p) {
+    $(`#portfolios .container`).append(`
+      <div class="projects tab-pane row"></div>
+      <div class="modal" id="portfolioModal">
+        <img class="modal-content" id="portfolioImg">
+      </div>
+    `);
+
+    $.each(data.portfolios, (i, p) => {
       Portfolios(p);
 
-      var modal = document.getElementById("portfolioModal");
       var img = document.getElementById(`${p.hId}`);
+      var modal = document.getElementById("portfolioModal");
       var modalImg = document.getElementById("portfolioImg");
-      // var captionText = document.getElementById("caption");
+
+      console.log(`${img.baseURI.replace("index.html", "")}${p.imageUrl}`);
 
       // display modal
-      $(img).click(function () {
+      $(img).click(() => {
         modal.style.display = "block";
-        modalImg.src = this.src;
+        modalImg.src = `${img.baseURI.replace("index.html", "")}${p.imageUrl}`;
         modalImg.alt = this.alt;
-        // captionText.innerHTML = this.alt;
       });
+
       // close the modal
-      $(modal).click(function () {
-        portfolioImg.className += "out";
-        setTimeout(function () {
+      $(modal).click(() => {
+        modalImg.className += "out";
+        setTimeout(() => {
           modal.style.display = "none";
-          portfolioImg.className = "modal-content";
-        }, 200);
+          modalImg.className = "modal-content";
+        }, 400);
       });
     });
     //#endregion portfolio
 
     //#region experiences
-    $.each(data.experiences, function (i, exp) {
+    $.each(data.experiences, (i, exp) => {
       $(".experiences-list").append(`
                 <div class="card">
                     <div class="row education">
@@ -136,7 +144,7 @@ getPlatformName = (s) => console.log(s[0].link);
     //#endregion experiences
 
     //#region education
-    $.each(data.education, function (i, edu) {
+    $.each(data.education, (i, edu) => {
       $(".education-list").append(`
             <div class="card">
                 <div class="row education">
@@ -160,7 +168,7 @@ getPlatformName = (s) => console.log(s[0].link);
     //#endregion education
 
     //#region testimonials
-    $.each(data.testimonials, function (i, testimonial) {
+    $.each(data.testimonials, (i, t) => {
       $(".carousel-indicators").append(
         `<li class="carousel-indicator" data-target="#cc-Indicators" dataSlideTo="0"></li>`
       );
@@ -170,10 +178,10 @@ getPlatformName = (s) => console.log(s[0].link);
                 <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
                         <a target="_blank">
-                            <img src="${testimonial.imageUrl}" alt="${testimonial.name}'s Image" />
+                            <img src="${t.imageUrl}" alt="${t.name}'s Image" />
                         </a>
-                        <div class="h5 pt-2">${testimonial.name}</div> <p class="category">${testimonial.country}</p> </div>
-                    <div class="col-lg-10 col-md-9"> <p>${testimonial.review}</p> </div>
+                        <div class="h5 pt-2">${t.name}</div> <p class="category">${t.country}</p> </div>
+                    <div class="col-lg-10 col-md-9"> <p>${t.review}</p> </div>
                 </div>
             </div>`);
       } else {
@@ -182,10 +190,10 @@ getPlatformName = (s) => console.log(s[0].link);
                 <div class="row testimonial">
                     <div class="col-lg-2 col-md-3 cc-reference-header">
                         <a target="_blank">
-                            <img src="${testimonial.imageUrl}" alt="${testimonial.name}'s Image" />
+                            <img src="${t.imageUrl}" alt="${t.name}'s Image" />
                         </a>
-                        <div class="h5 pt-2">${testimonial.name}</div> <p class="category">${testimonial.country}</p> </div>
-                    <div class="col-lg-10 col-md-9"> <p>${testimonial.review}</p> </div>
+                        <div class="h5 pt-2">${t.name}</div> <p class="category">${t.country}</p> </div>
+                    <div class="col-lg-10 col-md-9"> <p>${t.review}</p> </div>
                 </div>
             </div>`);
       }
@@ -225,7 +233,7 @@ getPlatformName = (s) => console.log(s[0].link);
     //#endregion pdf data
 
     //#region generate pdf
-    $(document).on("click", "#gpdf", function () {
+    $(document).on("click", "#gpdf", () => {
       DOC.fromHTML($("#pdf").html(), 20, 0, {
         width: 550,
         pagesplit: true,
@@ -255,8 +263,8 @@ function ShowOrHidePortfoliosBasedOnCondition(id) {
 }
 
 function Portfolios(p) {
-  $(`.portfolios`).append(`
-    <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px" id="${p.hId}">
+  $(`.projects`).append(`
+    <div id="${p.hId}" class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
       <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <figure class="cc-effect">
           <img src="${p.imageUrl}" id="${p.hId}-img" alt="${p.name}" />
@@ -267,7 +275,7 @@ function Portfolios(p) {
             </figcaption>
         </figure>
       </div>
-    </div>
+    </div>  
   `);
   ShowOrHidePortfoliosBasedOnCondition(p.hId);
 }

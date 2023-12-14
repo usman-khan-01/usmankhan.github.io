@@ -4,6 +4,7 @@
     }
 }
 
+/*#region portfolio  */
 .nav-pills .nav-item .nav-link {
     padding: 15px 15.5px;
     text-align: center;
@@ -15,50 +16,27 @@
     border-radius: 8px;
 }
 
-/*#region portfolio  */
-/* The Modal (background) */
+/* modal (background) */
 .modal {
-    /* Hidden by default */
     display: none;
-    /* Stay in place */
     position: fixed;
-    /* Sit on top */
     z-index: 99;
-    /* Location of the box */
-    padding-top: 100px;
+    padding-top: 65px;
     left: 0;
     top: 0;
-    /* Full width */
     width: 100%;
-    /* Full height */
     height: 100%;
-    /* Enable scroll if needed */
     overflow: auto;
-    /* Fallback color */
-    background-color: rgb(0, 0, 0);
-    /* Black w/ opacity */
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Modal Content (image) */
+/* modal content (image) */
 .modal-content {
     margin: auto;
     display: block;
-    width: 75%;
-    /* max-width: 75%; */
+    width: 60%;
+    max-width: 60%;
 }
-
-/* Caption of Modal Image */
-/* #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-} */
 
 @keyframes zoom {
     from {
@@ -100,21 +78,12 @@
     }
 }
 
-/* Add Animation */
-/* .modal-content,
-#caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-} */
-
 .out {
     animation-name: zoom-out;
     animation-duration: 0.6s;
 }
 
-/* 100% Image Width on Smaller Screens */
+/* 100% image width on smaller screens */
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
@@ -198,7 +167,6 @@
     right: 1%;
     z-index: 9999;
     position: fixed;
-    /* position: sticky; */
     z-index: 1;
 }
 
