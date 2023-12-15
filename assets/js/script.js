@@ -86,7 +86,12 @@ getPlatformName = (s) => console.log(s[0].link);
     });
 
     $(`#portfolios .container`).append(`
-      <div class="projects tab-pane row"></div>
+      <div class="tab-pane">
+        <div class="row" id="${ALL}"></div>
+        <div class="row" id="${ASP}"></div>
+        <div class="row" id="${ANG}"></div>
+        <div class="row" id="${WORD}"></div>
+      </div>
       <div class="modal" id="portfolioModal">
         <img class="modal-content" id="portfolioImg">
       </div>
@@ -95,7 +100,7 @@ getPlatformName = (s) => console.log(s[0].link);
     $.each(data.portfolios, (i, p) => {
       Portfolios(p);
 
-      var img = document.getElementById(`${p.hId}`);
+      var img = document.getElementById(`${p.hId}-inner`);
       var modal = document.getElementById("portfolioModal");
       var modalImg = document.getElementById("portfolioImg");
 
@@ -251,20 +256,28 @@ function Show(id) {
   $(`#${id}`).show();
 }
 
-function Hide(id) {
+function Hide(id, all) {
   $(`#${id}`).hide();
+  $(`#${all}`).hide();
 }
 
 function ShowOrHidePortfoliosBasedOnCondition(id) {
-  $(`.${ALL}`).click(() => Show(id));
-  $(`.${ASP}`).click(() => (id == ASP ? Show(id) : Hide(id)));
-  $(`.${ANG}`).click(() => (id == ANG ? Show(id) : Hide(id)));
-  $(`.${WORD}`).click(() => (id == WORD ? Show(id) : Hide(id)));
+  $(`.${ALL}`).click(() => Show(ALL), Hide(ASP), Hide(ANG), Hide(WORD));
+  $(`.${ASP}`).click(() => (id == ASP ? Show(id) : Hide(id, ALL)));
+  $(`.${ANG}`).click(() => (id == ANG ? Show(id) : Hide(id, ALL)));
+  $(`.${WORD}`).click(() => (id == WORD ? Show(id) : Hide(id, ALL)));
 }
 
 function Portfolios(p) {
-  $(`.projects`).append(`
-    <div id="${p.hId}" class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
+  PortfolioHtml(p, ALL);
+  Hide(p.hId, null);
+  ShowOrHidePortfoliosBasedOnCondition(p.hId);
+  PortfolioHtml(p, p.hId);
+}
+
+function PortfolioHtml(p, id) {
+  $(`#${id}`).append(`
+    <div id="${p.hId}-inner" class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
       <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <figure class="cc-effect">
           <img src="${p.imageUrl}" id="${p.hId}-img" alt="${p.name}" />
@@ -277,6 +290,5 @@ function Portfolios(p) {
       </div>
     </div>  
   `);
-  ShowOrHidePortfoliosBasedOnCondition(p.hId);
 }
 //#endregion functions
