@@ -92,35 +92,10 @@ getPlatformName = (s) => console.log(s[0].link);
         <div class="row" id="${ANG}"></div>
         <div class="row" id="${WORD}"></div>
       </div>
-      <div class="modal" id="portfolioModal">
-        <img class="modal-content" id="portfolioImg">
-      </div>
     `);
 
     $.each(data.portfolios, (i, p) => {
       Portfolios(p);
-
-      var img = document.getElementById(`${p.hId}-inner`);
-      var modal = document.getElementById("portfolioModal");
-      var modalImg = document.getElementById("portfolioImg");
-
-      console.log(`${img.baseURI.replace("index.html", "")}${p.imageUrl}`);
-
-      // display modal
-      $(img).click(() => {
-        modal.style.display = "block";
-        modalImg.src = `${img.baseURI.replace("index.html", "")}${p.imageUrl}`;
-        modalImg.alt = this.alt;
-      });
-
-      // close the modal
-      $(modal).click(() => {
-        modalImg.className += "out";
-        setTimeout(() => {
-          modal.style.display = "none";
-          modalImg.className = "modal-content";
-        }, 400);
-      });
     });
     //#endregion portfolio
 
@@ -277,7 +252,7 @@ function Portfolios(p) {
 
 function PortfolioHtml(p, id) {
   $(`#${id}`).append(`
-    <div id="${p.hId}-inner" class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
+    <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
       <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <figure class="cc-effect">
           <img src="${p.imageUrl}" id="${p.hId}-img" alt="${p.name}" />
