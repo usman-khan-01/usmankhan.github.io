@@ -228,7 +228,13 @@ getPlatformName = (s) => console.log(s[0].link);
 //#region functions
 
 function Show(id) {
-  $(`#${id}`).show();
+  if(id == ALL){
+    $(`#${id}`).show();
+    Hide(ASP, ANG);
+    Hide(WORD)
+  }else {
+    $(`#${id}`).show();
+  }
 }
 
 function Hide(id, all) {
@@ -237,7 +243,7 @@ function Hide(id, all) {
 }
 
 function ShowOrHidePortfoliosBasedOnCondition(id) {
-  $(`.${ALL}`).click(() => Show(ALL), Hide(ASP), Hide(ANG), Hide(WORD));
+  $(`.${ALL}`).click(() => Show(ALL));
   $(`.${ASP}`).click(() => (id == ASP ? Show(id) : Hide(id, ALL)));
   $(`.${ANG}`).click(() => (id == ANG ? Show(id) : Hide(id, ALL)));
   $(`.${WORD}`).click(() => (id == WORD ? Show(id) : Hide(id, ALL)));
@@ -254,14 +260,16 @@ function PortfolioHtml(p, id) {
   $(`#${id}`).append(`
     <div class="tab-content gallery mt-5 col-md-4" style="padding-bottom: 20px">
       <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        <figure class="cc-effect">
-          <img src="${p.imageUrl}" id="${p.hId}-img" alt="${p.name}" />
-            <figcaption>
-              <div class="h4">${p.framework}</div>
-              <p>${p.name}</p>
-              <p>${p.description}</p>
+        <a href="${p.link}" target="_blank">
+          <figure class="cc-effect">
+            <img src="${p.imageUrl}" id="${p.hId}-img" alt="${p.name}" />
+              <figcaption>
+                <div class="h4">${p.framework} <i class="fa fa-external-link" aria-hidden="true"></i></div>
+                <p>${p.name}</p>
+                <p>${p.description}</p>
             </figcaption>
-        </figure>
+          </figure>
+        </a>
       </div>
     </div>  
   `);
