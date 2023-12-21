@@ -37,10 +37,6 @@ getPlatformName = (s) => console.log(s[0].link);
   //#region local data
   $.getJSON("./assets/data/data.json", (data) => {
 
-    //#region meta tags
-    $(`#meta_description`).appned(`${data.description}`)
-    //#endregion meta tags
-
     //#region basic info
     $(".navbar-brand, .name").append(data.fullName);
     $(".category").append(data.profession);
