@@ -1,15 +1,15 @@
 {
     "fullName": "Usman Khan",
-    "firstName": "Usman",
-    "lastName": "Khan",
     "profession": "Full Stack Developer",
     "tagline": "I can help you achieve your goal as a web developer",
     "profileImageUrl": "assets/images/profile/profile-image.jpg",
     "about": "Hi, my name is Usman Khan and I am a full-stack web developer with close to 3 years of experience in Asp.Net, Angular, and WordPress. I am proficient in working with APIs and debugging. I am also familiar with a variety of development tools and methodologies such as N-Layered Architecture, SOLID Principles, Unit of Work, and Repository Pattern.",
     "basicInfo": {
+        "firstName": "Usman",
+        "lastName": "Khan",
+        "address": "Lahore District, Punjab, Pakistan",
         "mobile": "(+92)327-4416761",
         "email": "usmangorsi@outlook.com",
-        "address": "Lahore District, Punjab, Pakistan",
         "industry": "Information Technologies",
         "languages": "English, Urdu, Punjabi"
     },

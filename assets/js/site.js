@@ -1,3 +1,4 @@
+
 // const IMG = new Image();
 // const EMAIL_PATTERNS = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 const ALL = "all";
@@ -7,64 +8,67 @@ const WORD = "wordpress";
 
 getPlatformName = (s) => console.log(s[0].link);
 
+var data;
+
 // data
 (async () => {
   //#region cloud data
-  // const response = await fetch('https://api.perspective-v.com/graph/resume', {
-  //     method: 'POST',
-  //     headers: {
-  //         "Content-Type": "application/json",
-  //         "Accept": "*/*",
-  //     },
-  //     body: JSON.stringify({
-  //         query: `query getMyResume($token:String!){
-  //             getByAccessToken(accesToken:$token){
-  //                   name,
-  //                   htmlTemplate,
-  //                   jsonData
-  //                 }
-  //               }`,
-  //         variables: {
-  //             token: 'FS6Tgrq/T0qblqiuIg7i4Q=='
-  //         }
-  //     })
-  // });
-  // const body = await response.json();
-  // var data = JSON.parse(body.data.getByAccessToken.jsonData);
+  const response = await fetch('https://api.perspective-v.com/graph/resume', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+    },
+    body: JSON.stringify({
+      query: `query getMyResume($token:String!){
+              getByAccessToken(accesToken:$token){
+                    name,
+                    htmlTemplate,
+                    jsonData
+                  }
+                }`,
+      variables: {
+        token: 'FS6Tgrq/T0qblqiuIg7i4Q=='
+      }
+    })
+  });
+  const body = await response.json();
+  data = JSON.parse(body.data.getByAccessToken.jsonData);
   //#endregion cloud data
 
   //#region local data
-  $.getJSON("./assets/data/data.json", (data) => {
+  // $.getJSON("assets/data/data.json", (data) => {  });
+  //#endregion local data
 
-    //#region basic info
-    $(".navbar-brand, .name").append(data.fullName);
-    $(".category").append(data.profession);
-    document.querySelector(".profile-image").src = data.profileImageUrl;
-    // document.querySelector('.linkedIn_pdf').href = getPlatformName(data.socailLinks);
-    $(".aboutMe").append(data.about);
-    // $(".miniIntro").append();
-    var basicInformation = [
-      "Mobile",
-      "Email",
-      "Address",
-      "Industry",
-      "Languages",
-    ];
-    $.each(basicInformation, (i, value) => {
-      $(".pInfo .text-uppercase").append(value + ":" + "<br><br>");
-    });
-    $.each(data.basicInfo, (i, value) => {
-      $(".pInfoValue").append(
-        value != null && value === `${/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/g}`
-          ? `<a href="mailto:${value}">${value}</a><br><br>`
-          : value + "<br><br>"
-      );
-    });
-    //#endregion basic info
+  //#region basic info
+  $("title, .name, .foot-note").append(data.fullName);
+  $(".profession").append(data.profession);
+  $(".tagline").append(data.tagline);
+  document.querySelector(".profile-image").src = data.profileImageUrl;
+  $(".description").append(data.about);
+  var basicInformation = [
+    "First Name",
+    "Last Name",
+    "Address",
+    "Phone",
+    "Email",
+    "Industry",
+    "Languages",
+  ];
+  $.each(basicInformation, (i, info) => {
+    $(".basic-info").append(`
+      <li class="text-paragraph dark:text-slate-200 w-full xs:max-w-[100%]  max-w-[50%] ltr:pl-[18px] rtl:pr-[18px] my-[10px] relative before:absolute before:content-[''] before:bg-accent1 before:w-[6px] before:h-[6px] ltr:before:left-0 rtl:before:right-0 before:top-[8px] before:rounded-full after:absolute after::content-[''] after:w-4 after:h-4 after:border-2 after:border-accent1 ltr:after:left-[-5px] rtl:after:right-[-5px] after:top-[3px] after:border-solid after:rounded-full text-[17px]">
+        ${info}:<span class="basic-info-value"></span>
+      </li>`);
+  });
+  $.each(data.basicInfo, (i, value) => {
+    $(".basic-info-value").append(value + "<br><br>");
+  });
+  //#endregion basic info
 
-    //#region skills
-    $.each(data.skills, (i, skill) => {
-      $(".skills").append(`
+  //#region skills
+  $.each(data.skills, (i, skill) => {
+    $(".skills").append(`
             <div class="col-md-4 skill">
                 <div class="progress-container progress-primary"><span class="progress-badge">${skill.name}</span>
                     <div class="progress">
@@ -75,17 +79,17 @@ getPlatformName = (s) => console.log(s[0].link);
                 </div>
             </div>
         `);
-    });
-    //#endregion skills
+  });
+  //#endregion skills
 
-    //#region portfolio
-    $.each(data.portfolioHeadings, (i, ph) => {
-      $(".portfolio-heading").append(`
+  //#region portfolio
+  $.each(data.portfolioHeadings, (i, ph) => {
+    $(".portfolio-heading").append(`
         <li class="nav-item ${ph.link}"><a class="nav-link ${ph.active}" data-toggle="tab" href="#${ph.link}" role="tablist">${ph.name}</a></li>
       `);
-    });
+  });
 
-    $(`#portfolios .container`).append(`
+  $(`#portfolios .container`).append(`
       <div class="tab-pane">
         <div class="row" id="${ALL}"></div>
         <div class="row" id="${ASP}"></div>
@@ -94,14 +98,14 @@ getPlatformName = (s) => console.log(s[0].link);
       </div>
     `);
 
-    $.each(data.portfolios, (i, p) => {
-      Portfolios(p);
-    });
-    //#endregion portfolio
+  $.each(data.portfolios, (i, p) => {
+    Portfolios(p);
+  });
+  //#endregion portfolio
 
-    //#region experiences
-    $.each(data.experiences, (i, exp) => {
-      $(".experiences-list").append(`
+  //#region experiences
+  $.each(data.experiences, (i, exp) => {
+    $(".experiences-list").append(`
                 <div class="card">
                     <div class="row education">
                         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -120,12 +124,12 @@ getPlatformName = (s) => console.log(s[0].link);
                     </div>
                 </div>
             `);
-    });
-    //#endregion experiences
+  });
+  //#endregion experiences
 
-    //#region education
-    $.each(data.education, (i, edu) => {
-      $(".education-list").append(`
+  //#region education
+  $.each(data.education, (i, edu) => {
+    $(".education-list").append(`
             <div class="card">
                 <div class="row education">
                     <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -144,53 +148,52 @@ getPlatformName = (s) => console.log(s[0].link);
                 </div>
             </div>
         `);
-    });
-    //#endregion education
-
-    //#region testimonials
-    $.each(data.testimonials, (i, t) => {
-      $(".carousel-indicators").append(
-        `<li class="carousel-indicator" data-target="#cc-Indicators" dataSlideTo="0"></li>`
-      );
-      if (i == 0) {
-        $(".carousel-indicator").addClass("active");
-        $(".carousel-inner").append(`<div class="carousel-item active">
-                <div class="row testimonial">
-                    <div class="col-lg-2 col-md-3 cc-reference-header">
-                        <a target="_blank">
-                            <img src="${t.imageUrl}" alt="${t.name}'s Image" />
-                        </a>
-                        <div class="h5 pt-2">${t.name}</div> <p class="category">${t.country}</p> </div>
-                    <div class="col-lg-10 col-md-9"> <p>${t.review}</p> </div>
-                </div>
-            </div>`);
-      } else {
-        $(".carousel-indicator").removeClass("active");
-        $(".carousel-inner").append(`<div class="carousel-item">
-                <div class="row testimonial">
-                    <div class="col-lg-2 col-md-3 cc-reference-header">
-                        <a target="_blank">
-                            <img src="${t.imageUrl}" alt="${t.name}'s Image" />
-                        </a>
-                        <div class="h5 pt-2">${t.name}</div> <p class="category">${t.country}</p> </div>
-                    <div class="col-lg-10 col-md-9"> <p>${t.review}</p> </div>
-                </div>
-            </div>`);
-      }
-    });
-    //#endregion testimonials
   });
-  //#endregion local data
+  //#endregion education
+
+  //#region testimonials
+  $.each(data.testimonials, (i, t) => {
+    $(".carousel-indicators").append(
+      `<li class="carousel-indicator" data-target="#cc-Indicators" dataSlideTo="0"></li>`
+    );
+    if (i == 0) {
+      $(".carousel-indicator").addClass("active");
+      $(".carousel-inner").append(`<div class="carousel-item active">
+                <div class="row testimonial">
+                    <div class="col-lg-2 col-md-3 cc-reference-header">
+                        <a target="_blank">
+                            <img src="${t.imageUrl}" alt="${t.name}'s Image" />
+                        </a>
+                        <div class="h5 pt-2">${t.name}</div> <p class="category">${t.country}</p> </div>
+                    <div class="col-lg-10 col-md-9"> <p>${t.review}</p> </div>
+                </div>
+            </div>`);
+    } else {
+      $(".carousel-indicator").removeClass("active");
+      $(".carousel-inner").append(`<div class="carousel-item">
+                <div class="row testimonial">
+                    <div class="col-lg-2 col-md-3 cc-reference-header">
+                        <a target="_blank">
+                            <img src="${t.imageUrl}" alt="${t.name}'s Image" />
+                        </a>
+                        <div class="h5 pt-2">${t.name}</div> <p class="category">${t.country}</p> </div>
+                    <div class="col-lg-10 col-md-9"> <p>${t.review}</p> </div>
+                </div>
+            </div>`);
+    }
+  });
+  //#endregion testimonials
+
 })();
 
 //#region functions
 
 function Show(id) {
-  if(id == ALL){
+  if (id == ALL) {
     $(`#${id}`).show();
     Hide(ASP, ANG);
     Hide(WORD)
-  }else {
+  } else {
     $(`#${id}`).show();
   }
 }
