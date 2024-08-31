@@ -167,9 +167,16 @@
     ],
     "experiences": [
         {
+            "company": "TareenSoft",
+            "profession": "Software Engineer",
+            "duration": "January 2024 - Present",
+            "companyLogo": "images/placeholder-400x400.gif",
+            "description": "Working as an Asp.net and Angular developer. \n\n &#x2022; Tres Technologies (Asp.Net + Angular) "
+        },
+        {
             "company": "Freelancing",
             "profession": "Full Stack Developer",
-            "duration": "March 2020 - Present",
+            "duration": "March 2020 - January 2024",
             "companyLogo": "images/placeholder-400x400.gif",
             "description": "Working as a freelancer in Asp.net, Angular, Angular Dart, and WordPress. Till now, I have worked on some of the projects listed below: \n\n &#x2022; My Life You Choose (Asp.Net MVC) \n &#x2022; AM-Brisbane-Psychology (Asp.Net Razor Pages) \n &#x2022; Ease My Sales (Angular) \n &#x2022; Pagric Web Application (Angular) \n &#x2022; Tipnet (Angular) \n &#x2022; Tamino Autograph (WordPress) \n &#x2022; Roofers Free Zone Co (WordPress)"
         },
