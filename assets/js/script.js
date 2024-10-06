@@ -6,7 +6,7 @@ const ASP = "aspnet";
 const ANG = "angular";
 const WORD = "wordpress";
 
-getPlatformName = (s) => console.log(s[0].link);
+// getPlatformName = (s) => console.log(s[0].link);
 
 // data
 (async () => {
@@ -229,11 +229,11 @@ getPlatformName = (s) => console.log(s[0].link);
 //#region functions
 
 function Show(id) {
-  if(id == ALL){
+  if (id == ALL) {
     $(`#${id}`).show();
     Hide(ASP, ANG);
-    Hide(WORD)
-  }else {
+    Hide(WORD);
+  } else {
     $(`#${id}`).show();
   }
 }
