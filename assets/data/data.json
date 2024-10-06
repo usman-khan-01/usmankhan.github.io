@@ -198,10 +198,10 @@
     "education": [
         {
             "institution": "Virtual University of Pakistan",
-            "degree": "Bscs",
+            "degree": "Bachelor in computer science",
             "subject": "Computer Science",
-            "summary": "I'm currently doing my bechelors in computer science from virtual university.",
-            "yearOfGraduation": "2017 - 2024 (Expected)"
+            "summary": "I've completed my bechelors in computer science from virtual university.",
+            "yearOfGraduation": "2017 - 2024"
         },
         {
             "institution": "Superior Group of Colleges",

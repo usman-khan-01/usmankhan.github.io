@@ -11,31 +11,31 @@ getPlatformName = (s) => console.log(s[0].link);
 // data
 (async () => {
   //#region cloud data
-  // const response = await fetch('https://api.perspective-v.com/graph/resume', {
-  //     method: 'POST',
-  //     headers: {
-  //         "Content-Type": "application/json",
-  //         "Accept": "*/*",
-  //     },
-  //     body: JSON.stringify({
-  //         query: `query getMyResume($token:String!){
-  //             getByAccessToken(accesToken:$token){
-  //                   name,
-  //                   htmlTemplate,
-  //                   jsonData
-  //                 }
-  //               }`,
-  //         variables: {
-  //             token: 'FS6Tgrq/T0qblqiuIg7i4Q=='
-  //         }
-  //     })
-  // });
-  // const body = await response.json();
-  // var data = JSON.parse(body.data.getByAccessToken.jsonData);
+  const response = await fetch('https://api.perspective-v.com/graph/resume', {
+      method: 'POST',
+      headers: {
+          "Content-Type": "application/json",
+          "Accept": "*/*",
+      },
+      body: JSON.stringify({
+          query: `query getMyResume($token:String!){
+              getByAccessToken(accesToken:$token){
+                    name,
+                    htmlTemplate,
+                    jsonData
+                  }
+                }`,
+          variables: {
+              token: 'oN6XTVOnUk2R5HQgW90cOg=='
+          }
+      })
+  });
+  const body = await response.json();
+  var data = JSON.parse(body.data.getByAccessToken.jsonData);
   //#endregion cloud data
 
   //#region local data
-  $.getJSON("./assets/data/data.json", (data) => {
+  // $.getJSON("./assets/data/data.json", (data) => {
 
     //#region basic info
     $(".navbar-brand, .name").append(data.fullName);
@@ -222,7 +222,7 @@ getPlatformName = (s) => console.log(s[0].link);
       DOC.save(`${data.fullName}'s Resume.pdf`);
     });
     //#endregion generate pdf
-  });
+  // });
   //#endregion local data
 })();
 
